@@ -1,0 +1,132 @@
+<!-- Meant to be pasted in body section for any initiative page with a team section -->
+<style type="text/css">
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .profile {
+        grid-column: span 4;
+        margin: 0;
+        padding: 1em 5px;
+    }
+
+    .description {
+        text-align: center;
+    }
+
+    .headshot {
+        max-width: 215px;
+        max-height: 215px;
+        width: 60%;
+        height: auto;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 5px;
+    }
+
+    @media only screen and (max-width: 750px) {
+        .profile {
+            grid-column: span 6;
+        }
+
+        .headshot {
+            width: 100%;
+            height: auto;
+        }
+    }
+    @media only screen and (max-width: 490px) {
+        .profile {
+            grid-column: span 12;
+        }
+    }
+
+    .headshot:after {
+        content: '';
+        display: block;
+        padding-bottom: 100%; /* The padding depends on the width, not on the height, so with a padding-bottom of 100% you will get a square */
+    }
+
+    .headshot img {
+        border-radius: 50%;
+        position: absolute; /* Take your picture out of the flow */
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0; /* Make the picture taking the size of it's parent */
+        width: 100%; /* This if for the object-fit */
+        height: 100%; /* This if for the object-fit */
+        object-fit: cover; /* Equivalent of the background-size: cover; of a background-image */
+        object-position: center;
+    }
+
+    .headshot .content {
+        margin: 0;
+    }
+
+    .name {
+        font-size: 1.3rem;
+        color: rgb(201, 42, 12);
+        font-family: 'Stratum2Web', sans-serif;
+    }
+
+    .org-title {
+        margin-top: 0;
+    }
+</style>
+
+<h3>Our Team</h3>
+
+<div class="grid">
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3581","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"158":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":472,"width":472,"class":"media-element
+            file-default","data-delta":"158"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Tristan Barthel</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">Business and Marketing (2024)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3621","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"159":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":2581,"width":2521,"class":"media-element
+            file-default","data-delta":"159"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Jade Duong</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">
+                MSB Financial Analytics (2022) <br />
+                Business Administration (2020)
+            </div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3411","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"154":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":367,"width":366,"class":"media-element
+            file-default","data-delta":"154"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Matthew Grenz</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">
+                Design and Innovation Management (2023) <br />
+                Marketing Minor (2023)
+            </div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3626","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"160":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":683,"width":698,"class":"media-element
+            file-default","data-delta":"160"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Emmanuel Moncada</div>
+            <div class="org-title">Web Developer</div>
+            <div class="dept">Computer Science (2023)</div>
+        </div>
+    </div>
+</div>

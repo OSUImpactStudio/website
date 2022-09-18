@@ -1,0 +1,136 @@
+<!--
+    Meant to be pasted in the body section, styling for the new portfolio page (mainly for card grids).
+    Uses a grid with 12 columns and assigns the grid-span on different screen sizes to reduce
+    the amount of cards per row.
+
+    This is the CSS for each portfolio page with cards to each initiative(core inits and adjacent inits), NOT the individual initiative pages. 
+-->
+<style type="text/css">
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-auto-rows: 1fr;
+        margin-top: -60px; /* Usually bad practice, but its used to remove some of drupal's whitespace */
+    }
+    
+    .card {
+        position: relative;
+        /* height: 100%; */
+        grid-column: span 4;
+        width: 90%;
+        margin: 0 auto;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        border-radius: 4px;
+        text-align: center;
+        overflow: hidden;
+    }
+    
+    .card:nth-child(n+4) {
+        margin-top: 25px;
+    }
+    
+    .card:hover {
+        box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+    }
+    
+    .card img {
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .card .media .content {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .card-text {
+        text-align: left;
+        padding: 2px 16px;
+        margin-bottom: 60px;
+    }
+    
+    .card-title {
+        text-align: left;
+        padding: 2px 16px;
+        font-family: 'Stratum2Web',sans-serif;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        font-weight: 300;
+        color: #d73f09;
+        margin-top: 10px;
+    }
+    
+    .btn-wrapper .card-btn {
+        display: inline-block;
+        width: 50%;
+        max-width: 100px;
+        margin: 15px 0;
+        padding: 2px 30px;
+    
+        border: 1px solid #D73F09;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: .4s ease;
+    
+        color: #D73F09;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 200;
+    }
+    
+    .btn-wrapper {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center
+    }
+    
+    .card-btn:hover {
+        background-color: #D73F09;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .blue-bar {
+        font-size: 0;
+        border-bottom: 3px solid rgb(0, 59, 92);
+        text-align: center;
+        margin-top: -20px; /* Usually bad practice, but its used to remove some of drupal's whitespace */
+    }
+    
+    @media only screen and (max-width: 980px) {
+        .card {
+            grid-column: span 6;
+        }
+        .card:nth-child(n+3) {
+            margin-top: 25px;
+        }
+    }
+    
+    @media only screen and (max-width: 680px) {
+        .card {
+            grid-column: span 12;
+            height: auto;
+        }
+    
+        .card:nth-child(n+2) {
+            margin-top: 25px;
+        }
+    }
+    
+    .eb-parallax .content .field-item {
+        background-color: transparent;
+    }
+    
+    .eb-parallax .content .field-item p,
+    .eb-parallax .content .field-item h3,
+    .eb-parallax .content .field-item h5 {
+        background-color: rgba(0,0,0,0.5);
+        padding: 8px;
+        border-radius: 5px;
+        color: white;
+    }
+    
+    </style>
+    

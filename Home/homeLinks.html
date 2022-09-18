@@ -1,0 +1,355 @@
+<!--
+-->
+<style type="text/css">
+.home-grid-container {
+    margin-top: -50px;
+    width: 100%;
+}
+
+.home-grid {
+    max-width: 870px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 1fr;
+    margin: 0 auto;
+}
+
+.home-grid-2 {
+    max-width: 870px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 1fr;
+    margin: 0 auto;
+}
+
+.home-grid-2 .home-card {
+    position: relative;
+    /* height: 300px;
+    width: 300px; */
+    grid-column: span 6;
+    height: 250px;
+    width: 350px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+}
+
+.home-card {
+    position: relative;
+    /* height: 300px;
+    width: 300px; */
+    /* grid-column: span 6; */
+    height: 250px;
+    width: 250px;
+    grid-column: span 4;
+
+    margin: 20px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+}
+
+.home-card:nth-child(n+4) {
+    margin-top: 25px;
+}
+
+.home-grid-2 .home-card:nth-child(n+3) {
+    margin-top: 25px;
+}
+
+.home-card:hover {
+    box-shadow: 0 10px 16px 0 rgb(0 0 0 / 26%);
+    cursor: pointer;
+}
+
+.home-card img {
+    height: 250px;
+    width: 250px;
+}
+
+.home-grid-2 .home-card img {
+    height: 350px;
+    width: 350px;
+}
+
+.home-card .media .content {
+    padding: 0;
+    margin: 0;
+}
+
+.home-card-text {
+    text-align: left;
+    padding: 2px 15px;
+}
+
+.home-card-title {
+    text-align: left;
+    font-family: 'Stratum2Web',sans-serif;
+    padding-left: 10px;
+    font-size: 2.3rem;
+    line-height: 2.3rem;
+    font-weight: 300;
+    color: #d73f09;
+    margin-top: 10px;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+    .home-grid {
+        max-width: 580px;
+    }
+    .home-card {
+        grid-column: span 6;
+    }
+    .home-card:nth-child(n+3) {
+        margin-top: 25px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .home-grid {
+        max-width: 290px;
+    }
+
+    .home-card {
+        grid-column: span 12;
+    }
+
+    .home-card:nth-child(n+2) {
+        margin-top: 25px;
+    }
+}
+
+.eb-parallax .content .field-item {
+    background-color: transparent;
+}
+.eb-parallax .content .field-item h3 {
+    background-color: transparent;
+    color: white;
+}
+
+.tri-arrow-holder {
+    display:block;
+    width: 53px;
+    height: 30px;
+    margin: 20px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.tri-arrow {
+	/* more triangle */
+	height: 15px; width: 15px;
+	border: 1px solid rgba(215, 63, 9, 0.6);
+	border-width: 5px 5px 0 0;
+	transform: rotate(45deg);
+    margin: 4px 11px;
+}
+
+.tri-arrow:before, .tri-arrow:after {
+	content: '';
+	position: absolute;
+	display: block;
+	height: 15px; width: 15px;
+	border-width: 5px 5px 0 0;
+}
+
+.tri-arrow:before {
+	border: 1px solid rgba(215, 63, 9, 0.3);
+	border-width: 5px 5px 0 0;
+	/* top - distance minus border */
+	top: 8px;
+    left: -12px;
+}
+
+.tri-arrow:after {
+	border: 1px solid rgba(215, 63, 9, 1);
+	border-width: 5px 5px 0 0;
+	/* top - distance plus border */
+	top: -17px;
+    left: 13px;
+}
+
+.home-card:hover .tri-arrow {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-width: 5px 5px 0 0;
+}
+
+.home-card:hover .tri-arrow:before {
+    /* top: 10px; */
+    /* left: -14px; */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-width: 5px 5px 0 0;
+}
+
+.home-card:hover .tri-arrow:after {
+    /* top: -20px; */
+    /* left: 14px; */
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-width: 5px 5px 0 0;
+}
+
+.home-card:hover .tri-arrow-holder {
+    /* margin: 10px 40px; */
+}
+
+.card-gradient {
+    background-image:
+    linear-gradient(to bottom, rgba(30, 30, 30, 0.8), rgba(0, 0, 0, 0));
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    color: white;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.link-overlay {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    z-index: 1;
+}
+</style>
+
+<div class="home-grid-container">
+	<div class="home-grid">
+		<div class="home-card">
+			[[{"fid":"3201","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"31":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":350,"width":350,"class":"media-element file-default","data-delta":"31"}}]]
+			<div class="card-gradient"></div>
+			<div class="overlay">
+				<div class="home-card-title">
+					About
+                </div>
+				<div class="home-card-text">
+					Learn more about who we are.
+                </div>
+				<div class="tri-arrow-holder">
+					<div class="tri-arrow">
+						&nbsp;
+                    </div>
+				</div>
+			</div>
+			<a href="/about"><span class="link-overlay"></span></a>
+        </div>
+
+		<div class="home-card">
+			[[{"fid":"3206","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"33":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":350,"width":350,"class":"media-element file-default","data-delta":"33"}}]]
+			<div class="card-gradient"></div>
+			<div class="overlay">
+				<div class="home-card-title">
+					Portfolio
+                </div>
+				<div class="home-card-text">
+					Our diverse and high growth initiatives.
+                </div>
+				<div class="tri-arrow-holder">
+					<div class="tri-arrow">
+						&nbsp;
+                    </div>
+				</div>
+				<a href="/portfolio"><span class="link-overlay"></span></a>
+            </div>
+		</div>
+
+		<div class="home-card">
+			[[{"fid":"3306","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"36":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":451,"width":450,"class":"media-element file-default","data-delta":"36"}}]]
+			<div class="card-gradient"></div>
+			<div class="overlay">
+				<div class="home-card-title">
+					Our Approach
+                </div>
+				<div class="home-card-text">
+					Refined. Proven. Tailored in time and emphasis.
+                </div>
+				<div class="tri-arrow-holder">
+					<div class="tri-arrow">
+						&nbsp;
+                    </div>
+				</div>
+				<a href="/methodology"><span class="link-overlay"></span></a>
+            </div>
+		</div>
+
+		<div class="home-card">
+            [[{"fid":"3396","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"39":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":350,"width":350,"class":"media-element file-default","data-delta":"39"}}]]
+			<div class="card-gradient"></div>
+			<div class="overlay">
+				<div class="home-card-title">
+					Services
+                </div>
+				<div class="home-card-text">
+					The services we provide to the Oregon State community.
+                </div>
+				<div class="tri-arrow-holder">
+					<div class="tri-arrow">
+						&nbsp;
+                    </div>
+				</div>
+				<a href="/services"><span class="link-overlay"></span></a>
+            </div>
+		</div>
+
+		<div class="home-card">
+			[[{"fid":"3456","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"40":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":350,"width":350,"class":"media-element file-default","data-delta":"40"}}]]
+			<div class="card-gradient">
+				&nbsp;
+            </div>
+			<div class="overlay">
+				<div class="home-card-title">
+					Innovators
+                </div>
+				<div class="home-card-text">
+					The idea champions we work with.
+                </div>
+				<div class="tri-arrow-holder">
+					<div class="tri-arrow">
+						&nbsp;
+                    </div>
+				</div>
+				<a href="/innovators"><span class="link-overlay"></span></a>
+            </div>
+		</div>
+
+		<div class="home-card">
+            [[{"fid":"3331","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"37":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":400,"width":400,"class":"media-element file-default","data-delta":"37"}}]]
+			<div class="card-gradient">
+				&nbsp;
+            </div>
+			<div class="overlay">
+				<div class="home-card-title">
+					Advisory Committee
+                </div>
+				<div class="home-card-text">
+					We are guided and supported.
+                </div>
+				<div class="tri-arrow-holder">
+					<div class="tri-arrow">
+						&nbsp;
+                    </div>
+				</div>
+                <a href="/advisory-committee"><span class="link-overlay"></span></a>
+			</div>
+		</div>
+	</div>
+</div>

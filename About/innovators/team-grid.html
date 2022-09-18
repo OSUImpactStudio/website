@@ -1,0 +1,2162 @@
+<!--
+    Full memebers page, styling is done through a grid with 12 columns,
+    the .profile elements change their width based on screen size to collapse the grid on smaller screens.
+    Drupal image import queries don't need to be edited, but the styling makes sure they are square.
+    Profiles are arranged alphabetically by last name.
+-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var out = '';
+        $('.profile').each(function () {
+            var name = $(this).find('.name').text().trim();
+            var org = $(this).find('.org-title').text().trim();
+            var dept = $(this).find('.dept').text().trim();
+            // org = org.replaceAll(",", "|");
+            // dept = dept.replaceAll(",", "|");
+            out += name + '\t' + org + '\t' + dept + '\n';
+        });
+        console.log(out);
+    });
+</script>
+
+<style type="text/css">
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .profile {
+        grid-column: span 3;
+    }
+
+    .description {
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 980px) {
+        .profile {
+            grid-column: span 4;
+        }
+        .headshot {
+            width: 80%;
+        }
+    }
+
+    @media only screen and (max-width: 550px) {
+        .profile {
+            grid-column: span 6;
+        }
+        .headshot {
+            width: 100%;
+        }
+    }
+
+    .headshot {
+        width: 60%;
+        height: auto;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 5px;
+    }
+
+    .headshot:after {
+        content: '';
+        display: block;
+        padding-bottom: 100%; /* The padding depends on the width, not on the height, so with a padding-bottom of 100% you will get a square */
+    }
+
+    .headshot img {
+        position: absolute; /* Take your picture out of the flow */
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0; /* Make the picture taking the size of it's parent */
+        width: 100%; /* This if for the object-fit */
+        height: 100%; /* This if for the object-fit */
+        object-fit: cover; /* Equivalent of the background-size: cover; of a background-image */
+        object-position: center;
+    }
+
+    .headshot .content {
+        margin: 0;
+    }
+
+    .name {
+        font-size: 1.3rem;
+        color: rgb(201, 42, 12);
+        font-family: 'Stratum2Web', sans-serif;
+    }
+
+    .org-title {
+        margin-top: 0;
+    }
+</style>
+
+<div class="grid">
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2086","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"2":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"2"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Vince Adams</div>
+            <div class="org-title">Extension Community Educator</div>
+            <div class="dept">Rural Community Explorer Program, CAS</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2091","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"3":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":480,"width":480,"class":"media-element
+            file-default","data-delta":"3"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Charlene Alexander</div>
+            <div class="org-title">
+                Vice President and Chief Diversity Officer (former)
+            </div>
+            <div class="dept"></div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2096","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"4":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":300,"width":300,"class":"media-element
+            file-default","data-delta":"4"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Alex Aljets</div>
+            <div class="org-title">Student Success Portfolio Manager</div>
+            <div class="dept">Information Services</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2101","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"5":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":359,"width":279,"class":"media-element
+            file-default","data-delta":"5"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Emily Anderson</div>
+            <div class="org-title">4-H Program Coordinator</div>
+            <div class="dept">Lane County Extension</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2916","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"134":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":300,"width":300,"class":"media-element
+            file-default","data-delta":"134"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Ellie Andreyka</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">Impact Studio (2018-2021)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2041","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"6":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":203,"width":166,"class":"media-element
+            file-default","data-delta":"6"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Scott Ashford</div>
+            <div class="org-title">Dean</div>
+            <div class="dept">COE</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2076","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"7":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":288,"width":274,"class":"media-element
+            file-default","data-delta":"7"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Anita Azarenko</div>
+            <div class="org-title">Interim Vice Provost/Executive Director (former)</div>
+            <div class="dept">OSU Extension and Engagement</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2106","view_mode":"default","fields":{"height":200,"width":200,"class":"media-element
+            file-default
+            cke_widget_element","data-delta":"9","format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"9":{"height":200,"width":200,"class":"media-element
+            file-default
+            cke_widget_element","data-delta":"9","format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":200,"width":200,"class":"media-element
+            file-default","data-delta":"9"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Andrea Ballinger</div>
+            <div class="org-title">CIO and Vice Provost</div>
+            <div class="dept">UIT</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2111","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"10":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"10"}}]]
+        </div>
+        <div class="description">
+            <div class="name">David Barber</div>
+            <div class="org-title">Senior Program Manager</div>
+            <div class="dept">Information Services, UIT</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3161","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Kyle
+            Barnes","field_file_image_title_text[und][0][value]":"Kyle
+            Barnes","external_url":""},"type":"media","field_deltas":{"148":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Kyle
+            Barnes","field_file_image_title_text[und][0][value]":"Kyle
+            Barnes","external_url":""}},"link_text":null,"attributes":{"alt":"Kyle
+            Barnes","title":"Kyle
+            Barnes","height":220,"width":220,"class":"media-element
+            file-default","data-delta":"148"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Kyle Barnes</div>
+            <div class="org-title">
+                Executive Assistant to the Executive Director (former)
+            </div>
+            <div class="dept">INTO OSU</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"1951","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"11":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":370,"width":326,"class":"media-element
+            file-default","data-delta":"11"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Jack Barth</div>
+            <div class="org-title">Executive Director</div>
+            <div class="dept">Marine Studies Initiative</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3581","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"158":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":472,"width":472,"class":"media-element
+            file-default","data-delta":"158"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Tristan Barthel</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">Impact Studio (2022-)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2116","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"12":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":166,"width":166,"class":"media-element
+            file-default","data-delta":"12"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Belinda Batten</div>
+            <div class="org-title">Executive Associate Dean; Professor</div>
+            <div class="dept">COE; MIME</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"1961","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"13":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"13"}}]]
+        </div>
+        <div class="description">
+            <div class="name">John Becker-Blease</div>
+            <div class="org-title">
+                Associate Dean of Graduate Student Development
+            </div>
+            <div class="dept">COB</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2926","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"136":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":800,"width":800,"class":"media-element
+            file-default","data-delta":"136"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Steph Bernell</div>
+            <div class="org-title">
+                Associate Dean, Associate Professor of Health Policy
+            </div>
+            <div class="dept">Graduate School</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3166","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Julianna
+            Betjemann","field_file_image_title_text[und][0][value]":"Julianna
+            Betjemann","external_url":""},"type":"media","field_deltas":{"149":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Julianna
+            Betjemann","field_file_image_title_text[und][0][value]":"Julianna
+            Betjemann","external_url":""}},"link_text":null,"attributes":{"alt":"Julianna
+            Betjemann","title":"Julianna
+            Betjemann","height":220,"width":220,"class":"media-element
+            file-default","data-delta":"149"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Julianna Betjemann</div>
+            <div class="org-title">Director of Student Experience</div>
+            <div class="dept">INTO OSU</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2121","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"14":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":200,"width":200,"class":"media-element
+            file-default","data-delta":"14"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Sherm Bloomer</div>
+            <div class="org-title">Associate Vice President</div>
+            <div class="dept">Budget and Resource Planning</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2126","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"15":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":210,"width":210,"class":"media-element
+            file-default","data-delta":"15"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Rakesh Bobba</div>
+            <div class="org-title">Associate Professor</div>
+            <div class="dept">EECS, COE</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2131","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"16":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":512,"width":512,"class":"media-element
+            file-default","data-delta":"16"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Jon Boeckenstedt</div>
+            <div class="org-title">Vice Provost</div>
+            <div class="dept">Enrollment Management</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3706","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"161":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":700,"width":500,"class":"media-element file-default","data-delta":"161"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Vrushali Bokil</div>
+            <div class="org-title">Acting Dean</div>
+            <div class="dept">COS</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3026","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"139":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"139"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Spencer Bonnell</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">Impact Studio (2019-2021)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2136","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"17":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":158,"class":"media-element
+            file-default","data-delta":"17"}}]]
+        </div>
+        <div class="description">
+            <div class="name">SueAnn Bottoms</div>
+            <div class="org-title">
+                Director of Precollege Programs (retired)
+            </div>
+            <div class="dept">The SMILE Program</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2031","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"18":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"18"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Julia Bradshaw</div>
+            <div class="org-title">Associate Professor</div>
+            <div class="dept">School of Arts and Communication, CLA</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2141","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"19":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":326,"width":330,"class":"media-element
+            file-default","data-delta":"19"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Gigi Bruce</div>
+            <div class="org-title">Special Assistant to the Provost</div>
+            <div class="dept">Office of the Provost</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2146","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"20":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":330,"width":330,"class":"media-element
+            file-default","data-delta":"20"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Noah Buckley</div>
+            <div class="org-title">Director</div>
+            <div class="dept">Office of Admissions</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2151","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"21":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":258,"width":258,"class":"media-element
+            file-default","data-delta":"21"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Olivia Burkhart</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">Impact Studio (2018-2021)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2026","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"22":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":324,"width":293,"class":"media-element
+            file-default","data-delta":"22"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Cory Buxton</div>
+            <div class="org-title">Professor</div>
+            <div class="dept">College of Education</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2156","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"23":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"23"}}]]
+        </div>
+        <div class="description">
+            <div class="name">John Buzzard</div>
+            <div class="org-title">Assistant Director</div>
+            <div class="dept">OSU Extension and Engagement</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3256","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"144":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":200,"width":200,"class":"media-element
+            file-default","data-delta":"144"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Tim Carroll</div>
+            <div class="org-title">Dean</div>
+            <div class="dept">College of Business</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2161","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"24":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":300,"width":300,"class":"media-element
+            file-default","data-delta":"24"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Evietta Chapman</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">Impact Studio (2019-2021)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2376","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"36":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":170,"width":170,"class":"media-element
+            file-default","data-delta":"36"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Mary Chuinard</div>
+            <div class="org-title">
+                Director of Undergraduate Student Services
+            </div>
+            <div class="dept">CEOAS</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2046","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"37":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":300,"width":300,"class":"media-element
+            file-default","data-delta":"37"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Jim Coakley</div>
+            <div class="org-title">
+                Senior Associate Dean for Analytics and Operations
+            </div>
+            <div class="dept">COB</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2316","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"38":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":200,"width":200,"class":"media-element
+            file-default","data-delta":"38"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Michael Collins</div>
+            <div class="org-title">
+                Director of Marketing and Communications
+            </div>
+            <div class="dept">COF</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2386","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"39":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":150,"width":150,"class":"media-element
+            file-default","data-delta":"39"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Rich Collins</div>
+            <div class="org-title">Marketing and Content Strategist</div>
+            <div class="dept">OSU Extension and Engagement</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2321","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"40":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":200,"width":200,"class":"media-element
+            file-default","data-delta":"40"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Colleen Conniff</div>
+            <div class="org-title">Director of Scholarships</div>
+            <div class="dept">Enrollment Management</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2391","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"41":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":256,"width":256,"class":"media-element
+            file-default","data-delta":"41"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Nikki Cook</div>
+            <div class="org-title">Program Coordinator, Center for the Outdoor Recreation Economy</div>
+            <div class="dept">OSU Extension Service</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3661","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"4":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":662,"width":882,"class":"media-element file-default","data-delta":"4"}}]]
+        </div>
+
+        <div class="description">
+            <div class="name">Richard Cooley</div>
+
+            <div class="org-title">
+                Associate Director<br />
+                GCE4ALL Research Center
+            </div>
+
+            <div class="dept">College of Science</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2931","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"137":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":200,"width":200,"class":"media-element
+            file-default","data-delta":"137"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Sarah Costello</div>
+            <div class="org-title">Founder, Strategist and Writer</div>
+            <div class="dept">Summer Bunker</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3251","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"142":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":224,"width":210,"class":"media-element
+            file-default","data-delta":"142"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Micheal Curry</div>
+            <div class="org-title">Instructor and Cybersecurity Researcher</div>
+            <div class="dept">EECS, COE</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3036","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"143":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":420,"width":420,"class":"media-element
+            file-default","data-delta":"143"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Anthony Davis</div>
+            <div class="org-title">Associate Dean for Research</div>
+            <div class="dept">COF</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2396","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"43":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":350,"width":350,"class":"media-element
+            file-default","data-delta":"43"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Lee Davis</div>
+            <div class="org-title">
+                Executive Director, Outdoor Recreation Economy Initiative
+            </div>
+            <div class="dept">OSU Extension Service</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2401","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"44":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":474,"width":330,"class":"media-element
+            file-default","data-delta":"44"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Allison Davis-White Eyes</div>
+            <div class="org-title">Community Diversity Relations (former)</div>
+            <div class="dept">Office of Institutional Diversity</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2406","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"45":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":199,"width":199,"class":"media-element
+            file-default","data-delta":"45"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Rick DeBellis</div>
+            <div class="org-title">
+                Associate Director of Enrollment Management
+            </div>
+            <div class="dept">Transfer Admissions</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3526","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"21":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":200,"width":215,"class":"media-element
+            file-default","data-delta":"21"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Thomas DeLuca</div>
+            <div class="org-title">Dean</div>
+            <div class="dept">College of Forestry</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2411","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"46":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":180,"width":160,"class":"media-element
+            file-default","data-delta":"46"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Alan Dennis</div>
+            <div class="org-title">Multimedia Tech Designer</div>
+            <div class="dept">Extension Communications</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"1981","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"25":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"25"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Christina Ann DeWitt</div>
+            <div class="org-title">Director</div>
+            <div class="dept">CAS, OSU Seafood Laboratory (Astoria)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2286","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"26":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"26"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Penny Diebel</div>
+            <div class="org-title">
+                Assistant Dean for Academic Programs; Associate Professor
+            </div>
+            <div class="dept">CAS</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2291","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"27":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":300,"width":300,"class":"media-element
+            file-default","data-delta":"27"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Dang Dinh</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">Impact Studio (2019-2021)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2226","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"28":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"28"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Jon Dolan</div>
+            <div class="org-title">Associate Vice Provost and Deputy CIO</div>
+            <div class="dept">UIT</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2036","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"29":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":203,"width":162,"class":"media-element
+            file-default","data-delta":"29"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Andy Dong</div>
+            <div class="org-title">School Head, Professor</div>
+            <div class="dept">MIME, COE</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3481","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"2":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":400,"width":400,"class":"media-element
+            file-default","data-delta":"2"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Shawn Donkin</div>
+            <div class="org-title">Associate Dean for Research</div>
+            <div class="dept">College of Forestry</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2056","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"30":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":166,"width":166,"class":"media-element
+            file-default","data-delta":"30"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Toni Doolen</div>
+            <div class="org-title">Dean</div>
+            <div class="dept">University Honors College; COEd</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2296","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"31":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"31"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Paul Dorres</div>
+            <div class="org-title">Academic Programs-Scholarships</div>
+            <div class="dept">CAS</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"271","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"photo
+            of Rich
+            Duncombe","field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"147":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"photo
+            of Rich
+            Duncombe","field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"alt":"photo
+            of Rich Duncombe","height":300,"width":300,"class":"media-element
+            file-default","data-delta":"147"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Rich Duncombe</div>
+            <div class="org-title">Executive Director</div>
+            <div class="dept">Impact Studio</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3621","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"159":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":2581,"width":2521,"class":"media-element
+            file-default","data-delta":"159"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Jade Duong</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">Impact Studio (2022-)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2301","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"32":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":140,"width":140,"class":"media-element
+            file-default","data-delta":"32"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Bryony DuPont</div>
+            <div class="org-title">Assistant Professor, Boeing Professor</div>
+            <div class="dept">COE, MIME</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2306","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"33":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":180,"width":150,"class":"media-element
+            file-default","data-delta":"33"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Jessica DuPont</div>
+            <div class="org-title">
+                Executive Director, Market Development and Student Experience
+            </div>
+            <div class="dept">Ecampus</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3386","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"152":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":400,"width":400,"class":"media-element
+            file-default","data-delta":"152"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Sophie Dziak</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">Impact Studio (2021-2022)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2341","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"34":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":287,"width":287,"class":"media-element
+            file-default","data-delta":"34"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Lynn Egli</div>
+            <div class="org-title">Managing Partner</div>
+            <div class="dept">NextLevel Non-Profit Consulting LLC</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2356","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"35":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":400,"width":400,"class":"media-element
+            file-default","data-delta":"35"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Kris Elliott</div>
+            <div class="org-title">Assitant Director</div>
+            <div class="dept">OSU Extension Service Outdoor School</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3246","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"141":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":200,"width":200,"class":"media-element
+            file-default","data-delta":"141"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Brandon Ellis</div>
+            <div class="org-title">Graduate Student</div>
+            <div class="dept">COE</div>
+        </div>
+    </div>
+    <div class="profile">
+		<div class="headshot">
+			[[{"fid":"3756","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"153":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element file-default","data-delta":"153"}}]]</div>
+
+		<div class="description">
+			<div class="name">
+				Tom Fenske</div>
+
+			<div class="org-title">
+				Manager</div>
+
+			<div class="dept">
+				Health Sciences Business Center, Business and Engineering Business Center Manager</div>
+		</div>
+	</div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2261","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"47":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":400,"width":400,"class":"media-element
+            file-default","data-delta":"47"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Ed Feser</div>
+            <div class="org-title">Provost and Executive Vice President</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2441","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"48":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":180,"width":160,"class":"media-element
+            file-default","data-delta":"48"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Carlea Freeman</div>
+            <div class="org-title">Administrative Manager</div>
+            <div class="dept">OSU Ecampus</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2436","view_mode":"teaser","fields":{"format":"teaser","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"6":{"format":"teaser","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":202,"width":220,"class":"media-element
+            file-teaser","data-delta":"6"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Erin Gaines</div>
+            <div class="org-title">
+                Govt. Relations &amp; Consortium Manager, <br /> Center for the
+                Outdoor Recreation Economy
+            </div>
+            <div class="dept">OSU Extension Service</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2446","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"49":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":350,"width":350,"class":"media-element
+            file-default","data-delta":"49"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Gina Galaviz-Yap</div>
+            <div class="org-title">Juntos Statewide Coordinator</div>
+            <div class="dept">OSU Open Campus</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2456","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"50":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"50"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Lee Ann Garrison</div>
+            <div class="org-title">Director (former)</div>
+            <div class="dept">CLA, School of Arts & Communication</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3501","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"18":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":810,"width":810,"class":"media-element
+            file-default","data-delta":"18"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Brady Gibbons</div>
+            <div class="org-title">Professor of Materials Science</div>
+            <div class="dept">MIME, College of Engineering</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2466","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"53":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":330,"width":330,"class":"media-element
+            file-default","data-delta":"53"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Bob Gilmour</div>
+            <div class="org-title">Executive Director</div>
+            <div class="dept">INTO OSU</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2471","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"52":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"52"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Casey Glick</div>
+            <div class="org-title">
+                Director of International Admissions and Academic Support
+            </div>
+            <div class="dept">INTO OSU</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2351","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"54":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":640,"width":635,"class":"media-element
+            file-default","data-delta":"54"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Breanna Gollihugh</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">Impact Studio (2018-2020)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3416","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"155":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":597,"width":597,"class":"media-element
+            file-default","data-delta":"155"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Ginny Gonzales</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">Impact Studio (2021-2022)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2266","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"55":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"class":"media-element
+            file-default","data-delta":"55"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Mike Green</div>
+            <div class="org-title">Vice President</div>
+            <div class="dept">Finance and Administration</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3411","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"154":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":367,"width":366,"class":"media-element
+            file-default","data-delta":"154"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Matthew Grenz</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">Impact Studio (2021-)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2271","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"56":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"56"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Roy Haggerty</div>
+            <div class="org-title">Dean (former)</div>
+            <div class="dept">COS</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"1921","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"57":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":367,"width":354,"class":"media-element
+            file-default","data-delta":"57"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Eric Hansen</div>
+            <div class="org-title">
+                Department Head, Wood Science & Engineering
+            </div>
+            <div class="dept">COF</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3461","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"150":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":302,"width":302,"class":"media-element
+            file-default","data-delta":"150"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Cathy Hasenpflug</div>
+            <div class="org-title">
+                Associate Vice President and Chief HR Officer (former)
+            </div>
+            <div class="dept">Human Resources</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"1966","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"58":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":330,"width":330,"class":"media-element
+            file-default","data-delta":"58"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Sarah Henkel</div>
+            <div class="org-title">Assistant Professor; Senior Research</div>
+            <div class="dept">COS; Hatfield Marine Science Center (HMSC)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2496","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"59":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":350,"width":350,"class":"media-element
+            file-default","data-delta":"59"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Emily Henry</div>
+            <div class="org-title">Assistant Program Leader</div>
+            <div class="dept">OSU Open Campus</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2346","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"60":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":203,"width":135,"class":"media-element
+            file-default","data-delta":"60"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Kathryn Higley</div>
+            <div class="org-title">Rickert Professor and Head</div>
+            <div class="dept">School of Nuclear Science and Engineering</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"1971","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"61":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"class":"media-element
+            file-default","data-delta":"61"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Geoff Hollinger</div>
+            <div class="org-title">Assistant Professor</div>
+            <div class="dept">COE, Mechanical Engineering</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3376","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"150":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"151":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":400,"width":400,"class":"media-element
+            file-default","data-delta":"151"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Evin Holstad</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">Impact Studio (2021-2022)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3241","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"143":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":1628,"width":1628,"class":"media-element
+            file-default","data-delta":"143"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Evan Hopper-Moore</div>
+            <div class="org-title">Web Designer</div>
+            <div class="dept">Impact Studio (2021-)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2501","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"62":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"62"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Maureen Hosty</div>
+            <div class="org-title">Extension 4-H Youth Faculty; Professor</div>
+            <div class="dept">College of Public Health and Human Services</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2221","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"63":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":300,"width":300,"class":"media-element
+            file-default","data-delta":"63"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Tiger Hu</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">Impact Studio (2019-2021)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3041","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"144":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":200,"width":171,"class":"media-element
+            file-default","data-delta":"144"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Geoff Huntington</div>
+            <div class="org-title">Chief of Staff</div>
+            <div class="dept">COF</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3026","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"143":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"143"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Matthew Jansen</div>
+            <div class="org-title">Graduate Student</div>
+            <div class="dept">COE</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3666","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"5":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":662,"width":882,"class":"media-element file-default","data-delta":"5"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Kayla Jara</div>
+
+            <div class="org-title">
+                Program Coordinator<br />
+                GCE4ALL Research Center
+            </div>
+
+            <div class="dept">College of Science</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2541","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"71":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":200,"width":200,"class":"media-element
+            file-default","data-delta":"71"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Carlos Jensen</div>
+            <div class="org-title">
+                Associate Dean for Undergraduate Programs; Associate Professor
+                (former)
+            </div>
+            <div class="dept">COE; EECS</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2246","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"66":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":330,"width":330,"class":"media-element
+            file-default","data-delta":"66"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Mark Johnson</div>
+            <div class="org-title">Business Center Manager</div>
+            <div class="dept">Arts and Science Business Center</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2511","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"67":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":400,"width":400,"class":"media-element
+            file-default","data-delta":"67"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Bridget Jones</div>
+            <div class="org-title">
+                Senior Associate Director of Transfer Admissions
+            </div>
+            <div class="dept">Office of Admissions</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3046","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"145":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":654,"width":910,"class":"media-element
+            file-default","data-delta":"145"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Patriek Karayil</div>
+            <div class="org-title">Executive Consultant</div>
+            <div class="dept">Espalier Ventures</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3671","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"6":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":662,"width":882,"class":"media-element file-default","data-delta":"6"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Andy Karplus</div>
+
+            <div class="org-title">
+                Associate Director of Communications<br />
+                GCE4ALL Research Center
+            </div>
+
+            <div class="dept">College of Science</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3496","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"17":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":200,"width":195,"class":"media-element
+            file-default","data-delta":"17"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Katy Kavanagh</div>
+            <div class="org-title">Associate Dean for Research</div>
+            <div class="dept">College of Forestry</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2521","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"69":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":400,"width":400,"class":"media-element
+            file-default","data-delta":"69"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Ji Kim</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">Impact Studio (2018-2021)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2536","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"70":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":180,"width":160,"class":"media-element
+            file-default","data-delta":"70"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Dave King</div>
+            <div class="org-title">Professor Emeritus</div>
+            <div class="dept">CLA</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2551","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"72":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":203,"width":136,"class":"media-element
+            file-default","data-delta":"72"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Janet Knudsen</div>
+            <div class="org-title">Office Manager</div>
+            <div class="dept">COE</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2556","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"73":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"class":"media-element
+            file-default","data-delta":"73"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Dan Larson</div>
+            <div class="org-title">Vice Provost</div>
+            <div class="dept">Student Affairs</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2561","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"74":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":300,"width":300,"class":"media-element
+            file-default","data-delta":"74"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Noah Lee</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">Impact Studio (2019-2021)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3026","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"139":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"139"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Emily Longman</div>
+            <div class="org-title">ORTSOC Analyst</div>
+            <div class="dept">UIT</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3676","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"7":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":662,"width":882,"class":"media-element file-default","data-delta":"7"}}]]
+        </div>
+        <div class="description">
+            <div class="name">John Lueck</div>
+
+            <div class="org-title">
+                Associate Director of Technology Development and Partnerships<br />
+                GCE4ALL Research Center
+            </div>
+
+            <div class="dept">University of Rochester Medical Center</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3691","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"143":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":350,"width":350,"class":"media-element
+            file-default","data-delta":"143"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Ivory Lyles</div>
+            <div class="org-title">Vice Provost/Director</div>
+            <div class="dept">OSU Extension and Engagement</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"1941","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"75":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":200,"width":200,"class":"media-element
+            file-default","data-delta":"75"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Iain MacDonald</div>
+            <div class="org-title">
+                Associate Director, Tallwood Design Institute
+            </div>
+            <div class="dept">COF</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3681","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"8":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":662,"width":882,"class":"media-element file-default","data-delta":"8"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Bettye Maddux</div>
+
+            <div class="org-title">Director of Research Development</div>
+
+            <div class="dept">College of Science</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"1986","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"76":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":423,"width":374,"class":"media-element
+            file-default","data-delta":"76"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Roberta Marinelli</div>
+            <div class="org-title">Dean</div>
+            <div class="dept">CEOAS</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2426","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"77":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":150,"width":150,"class":"media-element
+            file-default","data-delta":"77"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Paula Matano</div>
+            <div class="org-title">Senior Program Strategist (former)</div>
+            <div class="dept">Outreach Program</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2566","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"78":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"78"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Rebecca Mathern</div>
+            <div class="org-title">
+                Associate Provost and University Registrar
+            </div>
+            <div class="dept">Enrollment Management</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2921","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"135":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":300,"width":300,"class":"media-element
+            file-default","data-delta":"135"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Prem Mathew</div>
+            <div class="org-title">
+                Associate Dean for Undergraduate Student Development
+            </div>
+            <div class="dept">COB</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2531","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"79":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":300,"width":300,"class":"media-element
+            file-default","data-delta":"79"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Timothy McElroy</div>
+            <div class="org-title">
+                Design Intern, Human Centered Design Lead
+            </div>
+            <div class="dept">Impact Studio (2019-2020)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2571","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"80":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":200,"width":200,"class":"media-element
+            file-default","data-delta":"80"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Amy McGowan</div>
+            <div class="org-title">Senior Vice President</div>
+            <div class="dept">INTO University Partnerships</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3656","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"3":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":662,"width":882,"class":"media-element file-default","data-delta":"3"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Ryan Mehl</div>
+
+            <div class="org-title">
+                Director<br />
+                GCE4ALL Research Center
+            </div>
+
+            <div class="dept">College of Science</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3626","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"160":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":683,"width":698,"class":"media-element
+            file-default","data-delta":"160"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Emmanuel Moncada</div>
+            <div class="org-title">Web Developer</div>
+            <div class="dept">Impact Studio (2022-)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2421","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"81":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":500,"width":501,"class":"media-element
+            file-default","data-delta":"81"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Meredith Morrice</div>
+            <div class="org-title">
+                Industry Engagement Manager, Outdoor Recreation Economy
+                Initiative
+            </div>
+            <div class="dept">OSU Extension Service</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3431","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"151":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":326,"width":326,"class":"media-element
+            file-default","data-delta":"151"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Jesse Mraz</div>
+            <div class="org-title">Assistant Director</div>
+            <div class="dept">Impact Studio</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2576","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"82":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":330,"width":330,"class":"media-element
+            file-default","data-delta":"82"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Erin Mulvey</div>
+            <div class="org-title">Transfer Transitions Coordinator</div>
+            <div class="dept">Office of Undergraduate Education</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"1936","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"83":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":200,"width":155,"class":"media-element
+            file-default","data-delta":"83"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Shannon Murray</div>
+            <div class="org-title">CPE Program Coordinator</div>
+            <div class="dept">Outreach and Engagement</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3591","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"140":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":489,"width":489,"class":"media-element
+            file-default","data-delta":"140"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Dakota Nelson</div>
+            <div class="org-title">Administrative & Operations Coordinator, Center for the Outdoor Recreation Economy</div>
+            <div class="dept">OSU Extension Service</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2171","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"92":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":210,"width":210,"class":"media-element
+            file-default","data-delta":"92"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Dave Nevin</div>
+            <div class="org-title">Assistant Professor of Practice</div>
+            <div class="dept">EECS, COE</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2611","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"93":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"94":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"94"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Janet Nishihara</div>
+            <div class="org-title">Director</div>
+            <div class="dept">
+                Educational Opportunities Program, College of Liberal Arts
+            </div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3506","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"19":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"19"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Jay Noller</div>
+            <div class="org-title">Director</div>
+            <div class="dept">
+                Global Hemp Innovation <br />
+                Center College of Ag Sci
+            </div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2616","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"95":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":298,"width":298,"class":"media-element
+            file-default","data-delta":"95"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Kristann Orton</div>
+            <div class="org-title">CEO & Founder</div>
+            <div class="dept">Inceodia</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3546","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"152":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":203,"width":166,"class":"media-element
+            file-default","data-delta":"152"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Tuba Ozkan-Haller</div>
+            <div class="org-title">Acting Dean</div>
+            <div class="dept">CEOAS</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2581","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"84":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":166,"width":166,"class":"media-element
+            file-default","data-delta":"84"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Bob Paasch</div>
+            <div class="org-title">Professor</div>
+            <div class="dept">MIME, COE</div>
+        </div>
+    </div>
+
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3171","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"147":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"147"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Courtney Pahl</div>
+            <div class="org-title">Academic Support Manager</div>
+            <div class="dept">INTO OSU</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2586","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"85":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"85"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Shain Panzeri</div>
+            <div class="org-title">Director of Academic Programs</div>
+            <div class="dept">INTO OSU</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3406","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"153":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":400,"width":400,"class":"media-element
+            file-default","data-delta":"153"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Min Seo (David) Park</div>
+            <div class="org-title">Data Research Analyst</div>
+            <div class="dept">Impact Studio (2021-2022)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2591","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"86":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":398,"width":398,"class":"media-element
+            file-default","data-delta":"86"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Mary Chrysa Parker</div>
+            <div class="org-title">Program Manager</div>
+            <div class="dept">Inceodia</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3071","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"146":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":262,"width":262,"class":"media-element
+            file-default","data-delta":"146"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Grant Pease</div>
+            <div class="org-title">Founder</div>
+            <div class="dept">Twinfern Tech, LLC</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2596","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"96":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"96"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Marleigh Perez</div>
+            <div class="org-title">
+                Director of Student Success and Support Services
+            </div>
+            <div class="dept">Ecampus</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3421","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"156":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":595,"width":595,"class":"media-element
+            file-default","data-delta":"156"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Artur Pinheiro Da Silva</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">Impact Studio (2021-2022)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2621","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"97":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":200,"width":200,"class":"media-element
+            file-default","data-delta":"97"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Daniel Powers</div>
+            <div class="org-title">Manager of Learning Experience Design</div>
+            <div class="dept">Professional & Continuing Education</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2601","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"98":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"98"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Keith Raab</div>
+            <div class="org-title">Director</div>
+            <div class="dept">Financial Aid</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2606","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"90":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"","field_file_image_title_text[und][0][value]":"","external_url":""},"99":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":300,"width":300,"class":"media-element
+            file-default","data-delta":"99"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Stephanie Ramos</div>
+            <div class="org-title">Program Coordinator</div>
+            <div class="dept">Office of Undergraduate Education</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2021","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"91":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"","field_file_image_title_text[und][0][value]":"","external_url":""},"100":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"100"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Marilyn Read</div>
+            <div class="org-title">Associate Professor</div>
+            <div class="dept">COB</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2631","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"101":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":358,"width":261,"class":"media-element
+            file-default","data-delta":"101"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Scott Reed</div>
+            <div class="org-title">Vice Provost (former)</div>
+            <div class="dept">
+                University Outreach and Engagement; Director, Extension Service
+            </div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2071","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"102":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":300,"width":300,"class":"media-element
+            file-default","data-delta":"102"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Opal Richenberg</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">Impact Studio (2019-2021)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3511","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"20":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"20"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Kristin Rifai</div>
+            <div class="org-title">Center Administrator</div>
+            <div class="dept">
+                Global Hemp Innovation <br />
+                Center College of Ag Sci
+            </div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2636","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"103":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"103"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Susana Rivera-Mills</div>
+            <div class="org-title">
+                Vice Provost for Academic Programs and Learning Innovation
+                (former)
+            </div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2641","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"104":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"104"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Bryson Robertson</div>
+            <div class="org-title">Associate Professor; Director</div>
+            <div class="dept">CEO; Pacific Marine Energy Center (PMEC)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2281","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"105":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"105"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Larry Rodgers</div>
+            <div class="org-title">Dean</div>
+            <div class="dept">CLA</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2066","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"106":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":300,"width":300,"class":"media-element
+            file-default","data-delta":"106"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Jennifer Rodriguez Pena</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">Impact Studio (2019-2021)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2646","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"107":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"107"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Zach Rogers</div>
+            <div class="org-title">ORTSOC Analyst</div>
+            <div class="dept">UIT</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2311","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"108":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":200,"width":200,"class":"media-element
+            file-default","data-delta":"108"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Randy Rosenberger</div>
+            <div class="org-title">Associate Dean for Student Success</div>
+            <div class="dept">COF</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2651","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"109":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"109"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Susan Rowe</div>
+            <div class="org-title">Research, Grants and Engagement Manager</div>
+            <div class="dept">
+                Enrollment Management; Precollege Programs and SMILE Program
+            </div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3026","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"139":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"139"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Juliana Ruble</div>
+            <div class="org-title">Project Engineer</div>
+            <div class="dept">COF</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2656","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"110":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"110"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Alan Sams</div>
+            <div class="org-title">Dean (former)</div>
+            <div class="dept">CAS</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2661","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"111":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":350,"width":350,"class":"media-element
+            file-default","data-delta":"111"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Angela Sandino</div>
+            <div class="org-title">
+                Regional Director - North Willamette Region
+            </div>
+            <div class="dept">OSU Extension Service</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2236","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"112":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"112"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Heidi Sann</div>
+            <div class="org-title">Associate Vice President and Controller</div>
+            <div class="dept">Finance and Administration</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2666","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"113":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"113"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Elena Sapp</div>
+            <div class="org-title">
+                Director of International Marketing & Recruitment
+            </div>
+            <div class="dept">INTO OSU</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2671","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"114":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":166,"width":166,"class":"media-element
+            file-default","data-delta":"114"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Kendra Sharp</div>
+            <div class="org-title">
+                Senior Advisor to the Provost; Professor
+            </div>
+            <div class="dept">International Affairs; COE</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2676","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"115":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":330,"width":330,"class":"media-element
+            file-default","data-delta":"115"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Gina Shellhammer</div>
+            <div class="org-title">Research & Data Analyst</div>
+            <div class="dept">Academic Planning and Learning Innovation</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2681","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"116":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":350,"width":350,"class":"media-element
+            file-default","data-delta":"116"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Jeff Sherman</div>
+            <div class="org-title">Program Leader</div>
+            <div class="dept">OSU Open Campus</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2686","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"117":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":358,"width":252,"class":"media-element
+            file-default","data-delta":"117"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Lindsey Shirley</div>
+            <div class="org-title">Associate Provost (former)</div>
+            <div class="dept">OSU Extension and Engagement</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3586","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"157":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"157"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Staci Simonich</div>
+            <div class="org-title">Dean</div>
+            <div class="dept">College of Ag Sciences</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2691","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"118":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":282,"width":282,"class":"media-element
+            file-default","data-delta":"118"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Dorian Smith</div>
+            <div class="org-title">
+                Coordinator of Black Student Access and Success
+            </div>
+            <div class="dept">Educational Opportunities Program</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2696","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"119":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":350,"width":350,"class":"media-element
+            file-default","data-delta":"119"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Beth St. Amand</div>
+            <div class="org-title">STEM Outreach Coordinator (former)</div>
+            <div class="dept">OSU Extension Service</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3486","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"3":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"3"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Jeffrey Steiner</div>
+            <div class="org-title">Associate Director</div>
+            <div class="dept">
+                Global Hemp Innovation <br />
+                Center College of Ag Sci
+            </div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3231","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"141":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":567,"width":584,"class":"media-element
+            file-default","data-delta":"141"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Paige Stone</div>
+            <div class="org-title">Design Intern</div>
+            <div class="dept">Impact Studio (2021-2022)</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2701","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"121":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":180,"width":160,"class":"media-element
+            file-default","data-delta":"121"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Robert Stone</div>
+            <div class="org-title">Professor of Mechanical Engineering</div>
+            <div class="dept">COE</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"1976","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"120":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"122":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"122"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Chris Stoner</div>
+            <div class="org-title">Senior Industry Contracts Manager</div>
+            <div class="dept">Research Office</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2011","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"123":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":269,"width":269,"class":"media-element
+            file-default","data-delta":"123"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Jim Sweeney</div>
+            <div class="org-title">
+                Special Assistant to the Dean; Professor
+            </div>
+            <div class="dept">COE</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3031","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"142":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":204,"width":309,"class":"media-element
+            file-default","data-delta":"142"}}]]
+        </div>
+        <div class="description">
+            <div class="name">John Sykes</div>
+            <div class="org-title">Interim Chief Executive Officer</div>
+            <div class="dept">INTO University Partnerships</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2706","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"124":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":300,"width":300,"class":"media-element
+            file-default","data-delta":"124"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Kim Tarrant</div>
+            <div class="org-title">Assistant to Associate Provost</div>
+            <div class="dept">OSU Extension and Engagement</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2711","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"125":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":200,"width":200,"class":"media-element
+            file-default","data-delta":"125"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Nick Tellwright</div>
+            <div class="org-title">
+                Interim Senior Vice President Global Marketing, Director of
+                Online Development
+            </div>
+            <div class="dept">INTO University Partnerships</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2716","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"126":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":384,"width":480,"class":"media-element
+            file-default","data-delta":"126"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Lisa Templeton</div>
+            <div class="org-title">Associate Provost</div>
+            <div class="dept">Ecampus</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2721","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"127":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":170,"width":170,"class":"media-element
+            file-default","data-delta":"127"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Wiley Thompson</div>
+            <div class="org-title">Extension Regional Director</div>
+            <div class="dept">Coast Region</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"1991","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"128":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":377,"width":378,"class":"media-elementfile-default","data-delta":"128"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Irem Tumer</div>
+            <div class="org-title">Vice President</div>
+            <div class="dept">Research Office</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3686","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"9":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":662,"width":882,"class":"media-element file-default","data-delta":"9"}}]]
+        </div>
+
+        <div class="description">
+            <div class="name">Karen Van Zee</div>
+
+            <div class="org-title">
+                Associate Director of Workshops<br />
+                GCE4ALL Research Center
+            </div>
+
+            <div class="dept">College of Science</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"3701","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"142":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":434,"width":354,"class":"media-element
+            file-default","data-delta":"142"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Antony Vorobyov</div>
+            <div class="org-title">Marketing Manager, <br /> Center for the Outdoor Recreation Economy</div>
+            <div class="dept">OSU Extension Service</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2936","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"138":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"138"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Brian Wall</div>
+            <div class="org-title">
+                Associate Vice President for Research, Innovation & Economic
+                Impact
+            </div>
+            <div class="dept">OSU Advantage</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2191","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"129":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":210,"width":210,"class":"media-element
+            file-default","data-delta":"129"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Tom Weller</div>
+            <div class="org-title">Department Head</div>
+            <div class="dept">EECS, COE</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2731","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"130":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"130"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Tara Williams</div>
+            <div class="org-title">Associate Dean (former)</div>
+            <div class="dept">Honors College</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2736","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"131":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"131"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Siew Sun Wong</div>
+            <div class="org-title">Associate Professor</div>
+            <div class="dept">CPHHS</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"1926","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"132":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":200,"width":203,"class":"media-element
+            file-default","data-delta":"132"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Adrienne Wonhof</div>
+            <div class="org-title">
+                Director of Administration and Operations
+            </div>
+            <div class="dept">COF</div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="headshot">
+            [[{"fid":"2741","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"133":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":220,"width":220,"class":"media-element
+            file-default","data-delta":"133"}}]]
+        </div>
+        <div class="description">
+            <div class="name">Kaplan Yalcin</div>
+            <div class="org-title">
+                Assistant Dean for Instructional Programs
+            </div>
+            <div class="dept">CEOAS</div>
+        </div>
+    </div>
+</div>

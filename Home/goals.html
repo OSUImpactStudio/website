@@ -1,0 +1,209 @@
+<!-- This section requires jQuery, which can be included with the line below (remove the '<!--' '-- >').
+	Currently this is already included at the top of the gallery section, so it's not needed.
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ -->
+<div class="goals">
+	<div class="goal" id="goal1">
+		[[{"fid":"2951","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"15":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":723,"width":1083,"class":"media-element file-default","data-delta":"15"}}]]
+		<div class="goal-header">SP4.0 Goal 1: Preeminence in Research, Scholarship, and Innovation </div>
+
+		<div class="overlay">
+			<div class="goal-text">
+				<ul>
+					<li>Future Initiative, To Be Determined</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="goal" id="goal2">
+		[[{"fid":"2956","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"16":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":749,"width":1123,"class":"media-element file-default","data-delta":"16"}}]]
+		<div class="goal-header">SP4.0 Goal 2: Transformative Education that is Accessible to All Learners </div>
+
+		<div class="overlay">
+			<div class="goal-text">
+				<ul>
+					<li>Capacity-Based Pricing</li>
+					<li>Oregon Research and Teaching Security Operations Center</li>
+					<li>Pathways to OSU</li>
+					<li>Transfer Enrollment and Success Expansion</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="goal" id="goal3">
+		[[{"fid":"2961","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"17":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":781,"width":1202,"class":"media-element file-default","data-delta":"17"}}]]
+		<div class="goal-header">SP4.0 Goal 3: Significant and Visible Impact in Oregon and Beyond </div>
+
+		<div class="overlay">
+			<div class="goal-text">
+				<ul>
+					<li>International Online</li>
+					<li>Outdoor Recreation Economy Initiative</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="goal" id="goal4">
+		[[{"fid":"2966","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"18":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":704,"width":1056,"class":"media-element file-default","data-delta":"18"}}]]
+		<div class="goal-header">SP4.0 Goal 4: A Culture of Belonging, Collaboration, and Innovation </div>
+
+		<div class="overlay">
+			<div class="goal-text">
+				<ul>
+					<li>Engineering & Design for Society</li>
+					<li>Transfer Student Experience</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="last-goal-pad">
+	</div>
+	<div class="goal" id="goal5">
+		[[{"fid":"2971","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"19":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":457,"width":881,"class":"media-element file-default","data-delta":"19"}}]]
+		<div class="goal-header"> Innovating in the Core </div>
+		<div class="overlay">
+			<div class="goal-text">
+				<ul>
+					<li>University Financial Management</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style type="text/css">
+    .goals {
+    	display: grid;
+    	grid-template-columns: repeat(12, 1fr);
+    }
+
+    .goal {
+    	grid-column: span 6;
+    	height: 230px;
+    	margin: 15px;
+    	position: relative;
+    	overflow: hidden;
+		cursor: pointer;
+    }
+
+	.last-goal-pad {
+		grid-column: span 3;
+	}
+
+	.goal ul {
+		list-style-type: circle;
+	}
+
+	.goal ul li {
+		list-style-image: none;
+	}
+
+    #goal1 {
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    #goal2 {
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+    #goal3 {
+        margin-left: 0;
+    }
+
+    #goal4 {
+        margin-right: 0;
+    }
+
+    .overlay {
+    	position: absolute;
+    	bottom: 0;
+    	left: 0;
+    	right: 0;
+    	background-color: rgba(97, 97, 97, 0.4);
+    	overflow: hidden;
+    	width: 100%;
+    	height: 0;
+    	transition: .5s ease;
+    	color: white;
+    }
+
+    .goal:hover .overlay {
+    	height: 73.5%;
+    	background-color: rgba(201, 42, 12, 0.6);
+    }
+
+    .goal img {
+    	position: absolute;
+    	left: 0;
+    	bottom: 0;
+    	min-height: 100%;
+    	min-width: 100%;
+		height: 100%;
+    	object-fit: cover;
+    }
+
+    .goal-header {
+    	width: 100%;
+    	position: absolute;
+    	top: 0;
+    	padding: 5px;
+    	background-color: rgba(78, 78, 78, 0.56);
+    	font-family: 'Stratum2Web',sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        font-weight: 500;
+        /* color: #d73f09; */
+        color: #fff;
+    }
+
+    .goal-text {
+    	padding: 10px;
+    }
+	@media only screen and (max-width: 980px) {
+	    .goal {
+	        grid-column: span 12;
+			margin: 0 0 15px 0;
+	    }
+
+		#goal3 {
+			margin-bottom: 15px;
+		}
+
+		#goal4 {
+			margin-bottom: 15px;
+		}
+	}
+	@media only screen and (max-width: 770px) {
+		.goal .overlay {
+			height: 73.5%;
+			background-color: rgba(201, 42, 12, 0.6);
+		}
+	}
+	@media only screen and (max-width: 550px) {
+		.goal .overlay li{
+			line-height: 1.1rem;
+			margin-bottom: 2px;
+		}
+	}
+</style>
+
+<script type="text/javascript">
+	$('#goal1').on('click', function() {
+	    location.href = '/strategic-alignment#goal1';
+	});
+	$('#goal2').on('click', function() {
+	    location.href = '/strategic-alignment#goal2';
+	});
+	$('#goal3').on('click', function() {
+	    location.href = '/strategic-alignment#goal3';
+	});
+	$('#goal4').on('click', function() {
+	    location.href = '/strategic-alignment#goal4';
+	});
+	$('#goal5').on('click', function() {
+	    location.href = '/strategic-alignment#goal5';
+	});
+</script>

@@ -1,0 +1,47 @@
+<div class="grid">
+    <div class="card">
+    [[{"fid":"3531","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"22":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":240,"width":576,"class":"media-element file-default","data-delta":"22"}}]]
+        <div class="card-title">
+            Genetic Code Expansion for All
+        </div>
+        <div class="card-text">
+            Optimizing opportunities for all as a global leader in protein engineering technologies.
+        </div>
+        <div class="btn-wrapper">
+            <a class="card-btn disabled" href="/gce4all">Coming Soon</a>
+        </div>
+    </div>
+    <div class="card">
+    [[{"fid":"3531","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"22":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":240,"width":576,"class":"media-element file-default","data-delta":"22"}}]]
+        <div class="card-title">
+            Hemp-based Carbon Economy
+        </div>
+        <div class="card-text">
+            Advancing hemp sector growth through Oregon State innovation.
+        </div>
+        <div class="btn-wrapper">
+            <a class="card-btn" href="/hce">Read more</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .disabled {
+        cursor: default !important;
+    }
+
+    .dsabled:hover {
+        color: initial !important;
+        background-color: initial !important;
+    }
+</style>
+
+<script>
+    let disabledLinks = Array.from(document.querySelectorAll('.disabled, .menuparent > a'))
+    disabledLinks.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault()
+        })
+        link.href = '';
+    })
+</script>

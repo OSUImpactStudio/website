@@ -1,0 +1,26 @@
+.menuparent > a {
+    color: white !important;
+}
+
+.menuparent > a:hover {
+    cursor: default;
+}
+
+#nice-menu-1 {
+    position: relative;
+    transform: translateY(-100%);
+    z-index: 999;
+}
+
+@media (min-width: 768px) {
+    #content {
+        position: relative;
+        transform: translateY(-87px);
+    }
+}
+
+@media (max-width: 767px) {
+    #page-wrapper {
+        padding: 0;
+    }
+}

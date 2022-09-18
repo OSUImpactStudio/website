@@ -1,0 +1,355 @@
+<!--
+	Image gallery for top of landing page, drupal image lines are put inside the .slide divs.
+	The first slide image should hav "id":"slide-0" included in the arguments.
+	All slide images should have "class":"... slideimg" in their arguments.
+	Captions have id="caption[#]" which is used for the javascript/jQuery fading at the bottom.
+-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<div id="gallery">
+	<div class="slide">
+		[[{"fid":"2196","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"11":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":2743,"width":4410,"class":"media-element file-default slideimg","id":"slide-0","data-delta":"11"}}]]
+	</div>
+	<div class="slide">
+		[[{"fid":"2626","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"12":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":455,"width":1024,"class":"media-element file-default slideimg","data-delta":"12"}}]]
+	</div>
+	<div class="slide">
+		[[{"fid":"3426","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"145":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":1081,"width":1941,"class":"media-element file-default slideimg","data-delta":"145"}}]]
+	</div>
+	<div class="slide">
+		[[{"fid":"3296","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"OSU Memorial Union Pillars","field_file_image_title_text[und][0][value]":"Methodology","external_url":""},"type":"media","field_deltas":{"144":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"OSU Memorial Union Pillars","field_file_image_title_text[und][0][value]":"Methodology","external_url":""}},"link_text":null,"attributes":{"alt":"OSU Memorial Union Pillars","title":"Methodology","height":1500,"width":2100,"class":"media-element file-default slideimg","data-delta":"144"}}]]
+	</div>
+
+	<!-- <div class="slide">
+		[[{"fid":"1706","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"2":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":512,"width":1024,"class":"media-element slideimg file-default","id":"slide-1","data-delta":"2"}}]]
+	</div> -->
+	<div class="gallery-content">
+		<div class="prev">
+			<i class="arrow left"></i>
+		</div>
+		<div class="captions">
+			<div class="caption" id="caption1">
+				<div class="title">
+					Impact Studio
+				</div>
+				<div class="subtitle">
+					Making innovation predictable
+				</div>
+			</div>
+			<div class="caption" id="caption2">
+				<div class="title">
+					Portfolio
+				</div>
+				<div class="subtitle">
+					Our diverse and high growth initiatives
+				</div>
+			</div>
+			<div class="caption" id="caption3">
+				<div class="title">
+					Innovators
+				</div>
+				<div class="subtitle">
+					Meet the champions of our work
+				</div>
+			</div>
+			<div class="caption" id="caption4">
+				<div class="title">
+					Our Approach
+				</div>
+				<div class="subtitle">
+					Refined. Proven. Tailored in time and emphasis.
+				</div>
+			</div>
+
+			<!-- <div class="caption" id="caption5">
+				<div class="title">
+					Innovators Corner
+				</div>
+			</div> -->
+		</div>
+		<div class="next">
+			<i class="arrow right"></i>
+		</div>
+	</div>
+	<div id="dots-container">
+		<div id="dots" style="text-align:center">
+		  <span class="dot dot-active" onclick="showSlide(0)"></span>
+		  <span class="dot" onclick="showSlide(1)"></span>
+		  <span class="dot" onclick="showSlide(2)"></span>
+		  <span class="dot" onclick="showSlide(3)"></span>
+		  <!-- <span class="dot" onclick="showSlide(4)"></span> -->
+		</div>
+	</div>
+</div>
+
+
+<style type="text/css">
+#gallery {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	display: block;
+}
+
+.gallery-content {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	transform: translateY(-50%);
+}
+
+.captions {
+	width: 100%;
+	text-align: center;
+}
+
+.caption {
+	width: 100%;
+	display: none;
+	cursor: pointer;
+}
+
+#caption1 {
+	display: block;
+}
+
+.caption .title {
+	font-family: 'Stratum2Web',sans-serif;
+	font-size: 3rem;
+	line-height: 3.1rem;
+	font-weight: 700;
+	color: #fff;
+}
+
+.caption:hover .title {
+	color: #d73f09;
+}
+
+.caption .subtitle {
+	font-family: 'Stratum2Web',sans-serif;
+	font-size: 1.5rem;
+	line-height: 1.7rem;
+	font-weight: 400;
+	color: #fff;
+}
+
+.slideimg {
+	position: relative;
+
+	min-width: 100%;
+	display: none;
+	object-fit: cover;
+	height: 550px;
+}
+
+@media only screen and (max-width: 1000px) {
+	.slideimg {
+	    height: 500px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.slideimg {
+	    height: 450px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.slideimg {
+	    height: 400px;
+	}
+	.caption .title {
+		font-size: 2.25rem;
+		line-height: 2.4rem;
+	}
+	.caption .subtitle {
+		font-size: 1.2rem;
+		line-height: 1.4rem;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.slideimg {
+	    height: 350px;
+	}
+}
+
+
+#slide-0 {
+	display: block;
+}
+
+#dots-container {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+#dots {
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 3px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.4s ease;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+}
+
+.dot-active, .dot:hover {
+	background-color: #717171;
+	box-shadow: 0 3px 6px 0 rgba(0,0,0,0.3);
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: auto;
+	padding: 16px;
+	color: white;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+}
+
+.arrow {
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 5px;
+}
+
+.right {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+}
+
+.left {
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+}
+
+.up {
+	transform: rotate(-135deg);
+	-webkit-transform: rotate(-135deg);
+}
+
+.down {
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+#page-title {
+	display: none;
+}
+
+</style>
+
+<script type="application/javascript">
+	// counter for slides, interval for automatic slide change (in ms)
+	var counter = 0;
+	var interval = 10000;
+
+	// functionality for left and right arrows on the gallery
+	$(".prev").click(function() {
+		showSlide(counter - 1);
+	});
+
+	$(".next").click(function() {
+		showSlide(counter + 1);
+	});
+
+	// show slide n, fade images and captions
+	function showSlide(n) {
+		// Reset interval, and grab slide elements
+		clearInterval(galleryTimer);
+		var i;
+		var slides = $(".slideimg");
+		var captions = $(".caption");
+		var dots = document.getElementsByClassName("dot");
+		var last = counter;
+
+		// loop counter around the amount of slides
+		counter = n;
+		if (counter == -1 || counter < 0) {
+			counter = slides.length - 1;
+		}
+		if (counter >= slides.length) {
+			counter = 0;
+		}
+
+		// fade out previous slide, and fade in the next as a callback
+		slides.eq(last).fadeOut(function() {
+			slides.eq(counter).fadeIn();
+		});
+
+		// fade out previous caption, and fade in the next as a callback
+		captions.eq(last).fadeOut(function() {
+			captions.eq(counter).fadeIn();
+		});
+
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" dot-active", "");
+		}
+		console.log(counter);
+		dots[counter].className += " dot-active";
+		galleryTimer = setInterval(nextSlide, interval);
+	}
+
+	function nextSlide() {
+		showSlide(counter+1);
+	}
+
+	$(document).ready(function() {
+		// Move the slide img elements out of their Drupal containers to simplify styling
+		$(".slideimg").each(function(){
+			var parent = $(this).closest(".slide");
+			parent.append($(this));
+		});
+
+		$(".slide > .media").remove();
+
+		// Set url locations for the captions (on click)
+		$("#gallery").parent().css( "padding", "0" );
+
+		$('#caption1').on('click', function() {
+			location.href = '/about';
+		});
+		$('#caption2').on('click', function() {
+			location.href = '/portfolio';
+		});
+		$('#caption3').on('click', function() {
+			location.href = '/innovators';
+		});
+		$('#caption4').on('click', function() {
+			location.href = '/methodology';
+		});
+		// $('#caption5').on('click', function() {
+		// 	location.href = '/sandbox-landing-page';
+		// });
+
+	});
+	var galleryTimer = setInterval(nextSlide, interval);
+
+</script>
