@@ -1,3 +1,22 @@
+.pine #footer {
+    background: url(/sites/all/themes/doug_fir/css/variants/pine/images/repeatable-treeline.png) #003B5C repeat-x left bottom;
+}
+    
+.media-youtube-video {
+	position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 0px;
+}
+
+.media-youtube-video iframe {
+    width: 100%;
+    height: 100%;
+	position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* The next 3 rules handle the placement of the top level navbar */
 .menuparent > a {
     color: white !important;
 }
@@ -8,19 +27,55 @@
 
 #nice-menu-1 {
     position: relative;
-    transform: translateY(-100%);
+    transform: translateY(-3.2rem);
     z-index: 999;
 }
+/* end top level navbar rulesets. */
 
+
+/* remving page titles from usual spot to eliminate whitespace. */
+#page-title {
+    display: none;
+}
+
+/* eliminates whitespace and shifts content up on page, different ammount required based on screen sizes. */
 @media (min-width: 768px) {
     #content {
-        position: relative;
-        transform: translateY(-87px);
+        margin-top: -2.9rem;
+    }
+    
+    div.content {
+        margin-top: 0;
     }
 }
 
 @media (max-width: 767px) {
+    #content {
+        margin-top: -0.8rem;
+    }
+    
     #page-wrapper {
         padding: 0;
     }
 }
+
+@media (max-width: 480px) {
+    #content {
+        margin-top: -1.6rem;
+    }
+    
+    #page-wrapper {
+        padding: 0;
+    }
+}
+
+/* enables clicking on edit buttons in dev mode when logged in. */
+.tabs {
+    position: absolute;
+    z-index: 998;
+    top: 2.5rem;
+    left: 30%;
+}
+
+
+
