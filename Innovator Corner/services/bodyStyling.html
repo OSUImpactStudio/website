@@ -1,0 +1,42 @@
+<!-- Makes the parallax overlay text white with no background, use p, h3 and h5 to get this styling
+    Also changes the size of the images and 2 column paragraphs specifically for this page.
+-->
+<style type="text/css">
+.eb-parallax .content .field-item {
+    background-color: transparent;
+}
+
+.eb-parallax .content .field-item p,
+.eb-parallax .content .field-item h3,
+.eb-parallax .content .field-item h5 {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+}
+
+.row-fluid.paragraph-2-col.entity.entity-paragraphs-item.paragraphs-item-paragraph-2-col img {
+    max-height: 400px;
+    width: auto;
+}
+
+.row-fluid.paragraph-2-col.entity.entity-paragraphs-item.paragraphs-item-paragraph-2-col {
+    margin: 0 50px;
+    width: auto;
+}
+
+.row-fluid.paragraph-2-col.entity.entity-paragraphs-item.paragraphs-item-paragraph-2-col.span6 {
+    padding: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+    .row-fluid.paragraph-2-col.entity.entity-paragraphs-item.paragraphs-item-paragraph-2-col {
+        margin: 0 100px;
+        width: auto;
+    }
+
+    .row-fluid.paragraph-2-col.entity.entity-paragraphs-item.paragraphs-item-paragraph-2-col .span6 {
+        padding: 1em;
+    }
+}
+</style>

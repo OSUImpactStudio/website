@@ -1,0 +1,176 @@
+<style type="text/css">
+.services-grid-container {
+    width: 100%;
+}
+
+.services-grid {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-auto-rows: 1fr;
+    margin: 0 auto;
+}
+
+.services-card {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    grid-column: span 2;
+
+    margin: 20px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 8px;
+    text-align: center;
+    overflow: hidden;
+    background-color: #fff;
+    border: 3px solid #006a8e;
+}
+
+.services-card:hover {
+    box-shadow: 0 10px 16px 0 rgb(0 0 0 / 26%);
+}
+
+.services-card img {
+    height: 250px;
+    width: 250px;
+}
+
+.services-card .media .content {
+    padding: 0;
+    margin: 0;
+}
+
+.services-card-text {
+    color: #000;
+    padding: 2px 15px;
+    line-height: 1.3;
+}
+
+.services-card-title {
+    font-family: 'Stratum2Web', sans-serif;
+    color: #dc4405;
+    padding-left: 10px;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+
+@media only screen and (max-width: 1250px) {
+    .services-grid {
+        max-width: 720px;
+    }
+
+    .services-card {
+        grid-column: span 3;
+    }
+}
+
+@media only screen and (max-width: 790px) {
+    .services-grid {
+        max-width: 480px;
+    }
+
+    .services-card {
+        grid-column: span 5;
+    }
+}
+</style>
+
+<h3 style="text-align: center; margin-top: -90px;margin-bottom: 30px;">We Provide Services to our Teams</h3>
+
+<div class="services-grid-container">
+    <div class="services-grid">
+        <div class="services-card">
+            <div class="services-card-title">
+                Adjacent Opportunity
+            </div>
+            <div class="services-card-text">
+                You have a great idea. We help you find the best opportunity for growth.
+            </div>
+        </div>
+
+        <div class="services-card">
+            <div class="services-card-title">
+                Change Management
+            </div>
+            <div class="services-card-text">
+                Change is necessary, good, and inevitable. It's also hard. We're here for you.
+            </div>
+        </div>
+
+        <div class="services-card">
+            <div class="services-card-title">
+                Process <br> Mapping
+            </div>
+            <div class="services-card-text">
+                Visualize your workflow and put it to work for you.
+            </div>
+        </div>
+
+        <div class="services-card">
+            <div class="services-card-title">
+                Program Launch &amp; Scale-Up
+            </div>
+            <div class="services-card-text">
+                Building and executing the best incubation, pilot, and scale-up plans.
+            </div>
+        </div>
+
+        <div class="services-card">
+            <div class="services-card-title">
+                Program / Project Management
+            </div>
+            <div class="services-card-text">
+                We have the tools, resources, and skills to manage your team and build your talent.
+            </div>
+        </div>
+
+        <div class="services-card">
+            <div class="services-card-title">
+                Solution Development
+            </div>
+            <div class="services-card-text">
+                We help you build solutions to grow your opportunity and address your pain points.
+            </div>
+        </div>
+
+        <div class="services-card">
+            <div class="services-card-title">
+                Solution Identification
+            </div>
+            <div class="services-card-text">
+                All needs and pain points have a solution. We help your team to discover them.
+            </div>
+        </div>
+
+        <div class="services-card">
+            <div class="services-card-title">
+                Strategic Planning
+            </div>
+            <div class="services-card-text">
+                Our strategy tables are an effective tool to identify decision areas and choice points.
+            </div>
+        </div>
+
+        <div class="services-card">
+            <div class="services-card-title">
+                Strategy Decisions
+            </div>
+            <div class="services-card-text">
+                Choosing the strategy that best performs your intended function.
+            </div>
+        </div>
+
+        <div class="services-card">
+            <div class="services-card-title">
+                User Needs Assessment
+            </div>
+            <div class="services-card-text">
+                Identifying, engaging, and understanding your audience is the priority.
+            </div>
+        </div>
+    </div>
+</div>
