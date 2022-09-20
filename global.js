@@ -10,11 +10,13 @@ Array.from(document.querySelectorAll('.menuparent > a, #mobile-main-menu > ul > 
 
 function titleToInitials(title) {
     let excludedWords = ['and', 'the', 'for', 'of'];
-    let titleWords = title.split(' ').filter(word => word !== '' && !excludedWords.includes(word.toLowerCase()) && /^[a-zA-Z]+$/.test(word));
+    let titleWords = title.split(' ').filter(word => word !== '' 
+                                                    && !excludedWords.includes(word.toLowerCase()) 
+                                                    && /^[a-zA-Z]+$/.test(word));
     return titleWords.map(word => word[0]).join('');
 }
 
-// TODO - figure out how to only do this for 30 chars or more, or maybe for all pages but make sure all abreivations are correct (HCE edge case)
+// adds the page title to teh page header, abbreviated when needed avoid overflow onto menu bar.
 window.addEventListener('load', function () {
     let title = document.querySelector('h1 > a');
     let pageTitle = document.querySelector('#page-title').textContent.toUpperCase().trim();
