@@ -1,0 +1,280 @@
+<body>
+<div class="grid">
+    <div class="card">
+        <p class="card-title">Participation and Communication</p>
+
+        <div class="bottom">
+            <ul class="card-desc">
+                <li>Actively contribute as a member of the initiative Core Team</li>
+                <li>Attend key Core Team meetings</li>
+                <li>Share and discuss findings and analysis</li>
+                <li>Participate as a full team member in the initiative process</li>
+                <li>Communicate with peers, faculty, and Impact Studio staff</li>
+            </ul>
+
+            <div class="tri-arrow-holder">
+                <div class="tri-arrow">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="card">
+        <p class="card-title">Primary Research</p>
+
+        <div class="bottom">
+            <ul class="card-desc">
+                <li>Develop and analyze surveys</li>
+                <li>Conduct Human Centered Design research including:</li>
+                <li>Empathy-based observation and interviews</li>
+                <li>Evaluate user's current experience</li>
+                <li>Brainstorm new solutions</li>
+                <li>Conduct co-design sessions</li>
+                <li>Prototype and test new solutions</li>
+                <li>Conduct interviews</li>
+                <li>Host feedback sessions and focus groups</li>
+            </ul>
+
+            <div class="tri-arrow-holder">
+                <div class="tri-arrow">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="card">
+        <p class="card-title">Secondary Research</p>
+
+        <div class="bottom">
+            <ul class="card-desc">
+                <li>Evaluate and select best data sources</li>
+                <li>Identify relevant market data sources</li>
+                <li>Identify the value chain for initiative within industry sectors</li>
+                <li>Conduct competitive research</li>
+            </ul>
+
+
+            <div class="tri-arrow-holder">
+                <div class="tri-arrow">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <p class="card-title">Analysis</p>
+
+        <div class="bottom">
+            <ul class="card-desc">
+                <li>Prepare prioritized user needs analysis and recommended solutions</li>
+                <li>Conduct market sizing analysis based on secondary and primary sources</li>
+                <li>Conduct competitive analysis of other organizations and their offerings</li>
+                <li>Develop profit pool analysis of the current value chain and the future state</li>
+                <li>Create preliminary financial estimates with the above assumptions</li>
+            </ul>
+
+
+            <div class="tri-arrow-holder">
+                <div class="tri-arrow">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<style>
+    body {
+        margin: 0;
+        --beaver-orange: #D73F09;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem 0;
+        place-items: center;
+        place-content: center;
+    }
+
+    .card {
+        background-color: var(--beaver-orange);
+        color: white;
+        aspect-ratio: 1 / 1;
+        width: 60%;
+        border: 1px solid black;
+
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card-title {
+        padding: 1rem;
+        margin-top: auto;
+        margin-bottom: auto !important; /* usually bad practice but needed in this case (thank drupal :/ ) */
+        text-align: center;
+        color: white;
+        font-size: var(--fa-font-solid);
+    }
+
+    .card-desc {
+        background-color: white;
+        color: black;
+        display: none;
+        opacity: 0%;
+        margin: 0;
+        padding-right: 0.8rem;
+        word-wrap: break-word;
+        margin: auto auto;
+    }
+
+    .bottom {
+        background-color: var(--beaver-orange);
+        width: 100%;
+        height: 20%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card.expanded .card-title {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .card.expanded .bottom {
+        height: 75%;
+        background-color: white;
+    }
+
+    .card.expanded .card-desc {
+        display: block;
+        opacity: 100%;
+    }
+
+    .card.expanded .tri-arrow,
+    .card.expanded .tri-arrow::before,
+    .card.expanded .tri-arrow::after {
+        border-color: black;
+    }
+
+    .card.expanded:hover .tri-arrow,
+    .card.expanded:hover .tri-arrow::before,
+    .card.expanded:hover .tri-arrow::after {
+        border-color: var(--beaver-orange);
+    }
+
+    /* !!!! THE FOLLOWING 2 RULES MUST BE IN THIS ORDER. THE ONE SELCTING CHILDREN OF EXPANDED MUST COME AFTER THE ONE NOT. !!!!!*/
+
+    /* from expanded to not expanded... i.e. closing the card */
+    .card-desc,
+    .card-title,
+    .bottom,
+    .card-title,
+    .card-desc {
+        transition: height 0.8s ease 0.1s, opacity 0.3s linear 0s, margin 1s linear 0s, background-color 0.4s ease 0.5s;
+    }
+
+    /* from not expanded to expanded... i.e. opening the card */
+    .expanded .card-desc,
+    .expanded .bottom,
+    .expanded .card-title,
+    .expanded .card-desc {
+        transition: height 1s ease 0s, opacity 1s linear 5s, margin 1s linear 0s, background-color 0.5s ease 0s;
+    }
+
+
+
+
+
+    .tri-arrow-holder {
+        display: block;
+        width: 53px;
+        height: 30px;
+        margin: auto 1.5rem 1.5rem auto;
+    }
+
+    .tri-arrow {
+        box-sizing: content-box;
+        /* more triangle */
+        height: 15px; width: 15px;
+        border: 1px solid black;
+        border-width: 5px 5px 0 0;
+        transform: rotate(45deg);
+        margin: 4px 11px;
+        transition: border-color 0.5s ease 0s;
+    }
+
+    .tri-arrow:before, .tri-arrow:after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 15px; width: 15px;
+        border-width: 5px 5px 0 0;
+        transition: border-color 0.5s ease 0s;
+    }
+
+    .tri-arrow:before {
+        border: 1px solid black;
+        border-width: 5px 5px 0 0;
+        /* top - distance minus border */
+        top: 8px;
+        left: -12px;
+    }
+
+    .tri-arrow:after {
+        border: 1px solid black;
+        border-width: 5px 5px 0 0;
+        /* top - distance plus border */
+        top: -17px;
+        left: 13px;
+    }
+
+    .card:hover .tri-arrow {
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-width: 5px 5px 0 0;
+    }
+
+    .card:hover .tri-arrow:before {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-width: 5px 5px 0 0;
+    }
+
+    .card:hover .tri-arrow:after {
+        border: 1px solid rgba(255, 255, 255, 1);
+        border-width: 5px 5px 0 0;
+    }
+
+    .card:hover {
+        cursor: pointer;
+    }
+
+
+
+</style>
+
+<script>
+    let cards = Array.from(document.getElementsByClassName("card"));
+
+
+
+    let transitionItems = Array.from(document.querySelectorAll('.card.card-title, .bottom, .card-title, .card-desc'))
+
+    cards.forEach(card => {
+        card.addEventListener('click', e => {
+            card.classList.toggle('expanded');
+
+
+            // todo find the card desc element of the card that was clicked and use a setTimeout to "delay" the change from display none to block since you cant apply a transtion on the display property with CSS.
+            // remove the display block from the expanded css class.
+        })
+    })
+
+</script>
