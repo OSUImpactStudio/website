@@ -1,4 +1,3 @@
-<body>
 <div class="grid">
     <div class="card">
         <p class="card-title">Participation and Communication</p>
@@ -84,29 +83,29 @@
         </div>
     </div>
 </div>
-</body>
 
-<style>
+<style type="text/css">
+
     body {
-        margin: 0;
         --beaver-orange: #D73F09;
     }
 
     .grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem 0;
-        place-items: center;
-        place-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 1rem;
+        gap: 1rem;
+        width: calc(100% - padding);
+        height: calc(100% - padding);
     }
 
     .card {
         background-color: var(--beaver-orange);
         color: white;
         aspect-ratio: 1 / 1;
-        width: 60%;
+        width: calc(50% - 1rem);
         border: 1px solid black;
-
 
         display: flex;
         flex-direction: column;
@@ -120,18 +119,16 @@
         margin-bottom: auto !important; /* usually bad practice but needed in this case (thank drupal :/ ) */
         text-align: center;
         color: white;
-        font-size: var(--fa-font-solid);
     }
 
     .card-desc {
         background-color: white;
         color: black;
-        display: none;
+        max-height: 0px;
         opacity: 0%;
-        margin: 0;
         padding-right: 0.8rem;
         word-wrap: break-word;
-        margin: auto auto;
+        margin: 0;
     }
 
     .bottom {
@@ -155,9 +152,30 @@
     }
 
     .card.expanded .card-desc {
-        display: block;
+        max-height: 80%;
         opacity: 100%;
+        margin: auto 1rem;
     }
+
+
+    /* !!!! THE FOLLOWING 2 RULES MUST BE IN THIS ORDER. THE ONE SELCTING CHILDREN OF EXPANDED MUST COME AFTER THE ONE NOT. !!!!!*/
+
+    /* from expanded to not expanded... i.e. closing the card */
+    .card-title,
+    .bottom,
+    .card-title,
+    .card-desc {
+        transition: height 0.8s ease 0.1s, opacity 0.3s linear 0s, margin 1s linear 0s, background-color 0.4s ease 0.5s, max-height 1s ease 0s;
+    }
+
+    /* from not expanded to expanded... i.e. opening the card */
+    .expanded .card-desc,
+    .expanded .bottom,
+    .expanded .card-title {
+        transition: height 1s ease 0s, opacity 1s linear 0.4s, margin 1s linear 0s, background-color 0.5s ease 0s, max-height 1s ease 0s;
+    }
+
+
 
     .card.expanded .tri-arrow,
     .card.expanded .tri-arrow::before,
@@ -170,29 +188,6 @@
     .card.expanded:hover .tri-arrow::after {
         border-color: var(--beaver-orange);
     }
-
-    /* !!!! THE FOLLOWING 2 RULES MUST BE IN THIS ORDER. THE ONE SELCTING CHILDREN OF EXPANDED MUST COME AFTER THE ONE NOT. !!!!!*/
-
-    /* from expanded to not expanded... i.e. closing the card */
-    .card-desc,
-    .card-title,
-    .bottom,
-    .card-title,
-    .card-desc {
-        transition: height 0.8s ease 0.1s, opacity 0.3s linear 0s, margin 1s linear 0s, background-color 0.4s ease 0.5s;
-    }
-
-    /* from not expanded to expanded... i.e. opening the card */
-    .expanded .card-desc,
-    .expanded .bottom,
-    .expanded .card-title,
-    .expanded .card-desc {
-        transition: height 1s ease 0s, opacity 1s linear 5s, margin 1s linear 0s, background-color 0.5s ease 0s;
-    }
-
-
-
-
 
     .tri-arrow-holder {
         display: block;
@@ -260,21 +255,11 @@
 
 </style>
 
-<script>
+<script type="text/javascript">
     let cards = Array.from(document.getElementsByClassName("card"));
 
-
-
-    let transitionItems = Array.from(document.querySelectorAll('.card.card-title, .bottom, .card-title, .card-desc'))
-
     cards.forEach(card => {
-        card.addEventListener('click', e => {
-            card.classList.toggle('expanded');
-
-
-            // todo find the card desc element of the card that was clicked and use a setTimeout to "delay" the change from display none to block since you cant apply a transtion on the display property with CSS.
-            // remove the display block from the expanded css class.
-        })
+        card.addEventListener('click', e => card.classList.toggle('expanded'))
     })
 
 </script>
