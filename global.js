@@ -7,11 +7,17 @@ Array.from(document.querySelectorAll('.menuparent > a, #mobile-main-menu > ul > 
     });
 });
 
-
+/**
+ * Returns the abbreviation of string passed in, getting rid of non-title words such as "the", "a", "an", etc.
+ * and captializing the first letter of each remaining word.
+ *
+ * @param {string} title
+ * @returns {string}
+ */
 function titleToInitials(title) {
     let excludedWords = ['and', 'the', 'for', 'of'];
-    let titleWords = title.split(' ').filter(word => word !== '' 
-                                                    && !excludedWords.includes(word.toLowerCase()) 
+    let titleWords = title.split(' ').filter(word => word !== ''
+                                                    && !excludedWords.includes(word.toLowerCase())
                                                     && /^[a-zA-Z]+$/.test(word));
     return titleWords.map(word => word[0]).join('');
 }
