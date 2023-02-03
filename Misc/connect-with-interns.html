@@ -1,0 +1,181 @@
+<style type="text/css">
+    .headshot {
+        max-width: 150px;
+        max-height: 150px;
+        width: 60%;
+        height: auto;
+        margin: auto;
+        overflow: hidden;
+        position: absolute;
+        margin-bottom: 5px;
+    }
+
+    @media only screen and (max-width: 750px) {
+        .headshot {
+            width: 100%;
+            height: auto;
+            /* grid-column: span 6; */
+        }
+    }
+    /* @media only screen and (max-width: 490px) {
+        .headshot {
+            grid-column: span 12;
+        }
+    } */
+
+    .headshot:after {
+        content: '';
+        display: block;
+        padding-bottom: 100%; /* The padding depends on the width, not on the height, so with a padding-bottom of 100% you will get a square */
+    }
+
+    .headshot img {
+        border-radius: 50%;
+        position: absolute; /* Take your picture out of the flow */
+        inset: 0; /* Make the picture taking the size of it's parent */
+        width: 100%; /* This if for the object-fit */
+        height: 100%; /* This if for the object-fit */
+        object-fit: cover; /* Equivalent of the background-size: cover; of a background-image */
+        object-position: center;
+    }
+
+    .headshot .content {
+        margin: 0;
+    }
+
+
+    .canvas {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        place-items: center;
+        padding: 12em;
+        text-align: center;
+    }
+
+    .canvas > h3 {
+        padding: 1em 3em;
+    }
+
+    .headshot:nth-child(1) {
+        top: 9%;
+        left: 7%;
+    }
+    .headshot:nth-child(2) {
+        top: 2%;
+        left: 34%;
+    }
+    .headshot:nth-child(3) {
+        top: 12%;
+        right: 6%;
+    }
+    .headshot:nth-child(4) {
+        bottom: 13%;
+        left: 17%;
+    }
+    .headshot:nth-child(5) {
+        bottom: 8%;
+        right: 15%;
+    }
+    .headshot:nth-child(6) {
+        bottom: 76%;
+        right: 30%;
+    }
+    .headshot:nth-child(7) {
+        bottom: 38%;
+        right: -4%;
+    }
+    .headshot:nth-child(8) {
+        bottom: 38%;
+        right: 89%;
+    }
+    .headshot:nth-child(9) {
+        bottom: 0%;
+        right: 45%;
+    }
+
+    .buttons {
+        display: flex;
+        --btn-rounding: 10px;
+    }
+
+    .buttons > div {
+        color: white;
+        background-color: var(--stratosphere);
+        padding: 20px;
+    }
+
+    .buttons > div:hover {
+        cursor: pointer;
+        transform: scale(110%);
+        box-shadow: 2px 2px gainsboro;
+        transition: 0.2s ease;
+        position: relative;
+    }
+
+    .buttons > div:nth-child(odd) {
+        border-radius: var(--btn-rounding) 0px 0px var(--btn-rounding);
+        border-right: solid 1px black;
+    }
+
+    .buttons > div:nth-child(even) {
+        border-radius: 0 var(--btn-rounding) var(--btn-rounding) 0;
+        border-left: solid 1px black;
+    }
+
+
+
+
+
+</style>
+
+<div class="canvas">
+
+    <div class="headshot">
+        [[{"fid":"3811","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"2":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":1986,"width":2354,"class":"media-element file-default","data-delta":"2"}}]]
+    </div>
+    <div class="headshot">
+        [[{"fid":"3621","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"159":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":2581,"width":2521,"class":"media-element file-default","data-delta":"159"}}]]
+    </div>
+    <div class="headshot">
+        [[{"fid":"3826","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"161":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":2501,"width":2271,"class":"media-element file-default","data-delta":"161"}}]]
+    </div>
+    <div class="headshot">
+        [[{"fid":"3411","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"154":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":367,"width":366,"class":"media-element file-default","data-delta":"154"}}]]
+    </div>
+    <div class="headshot">
+        [[{"fid":"3816","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"1":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":1613,"width":1613,"class":"media-element file-default","data-delta":"1"}}]]
+    </div>
+    <div class="headshot">
+        [[{"fid":"2531","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"79":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":300,"width":300,"class":"media-element file-default","data-delta":"79"}}]]
+    </div>
+    <div class="headshot">
+        [[{"fid":"3406","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"153":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":400,"width":400,"class":"media-element file-default","data-delta":"153"}}]]
+    </div>
+    <div class="headshot">
+        [[{"fid":"2916","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"134":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":300,"width":300,"class":"media-element file-default","data-delta":"134"}}]]
+    </div>
+    <div class="headshot">
+        [[{"fid":"3231","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"141":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":567,"width":584,"class":"media-element file-default","data-delta":"141"}}]]
+    </div>
+
+
+
+    <h3>Want some more insight? Check out what some of our previous interns have said, or even reach out to one of our current team members!</h3>
+
+    <div class="buttons">
+        <div data-link="/about#testimonals">Testimonials</div>
+        <div data-link="/about#current-team">Current Team</div>
+    </div>
+
+
+</div>
+
+
+<script>
+    let buttons = Array.from(document.querySelectorAll('.buttons > div'));
+
+    buttons.forEach(btn => btn.addEventListener('click', (e) => window.location = `https://impactstudio.oregonstate.edu/${btn.dataset.link}`));
+
+</script>
