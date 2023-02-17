@@ -54,7 +54,7 @@
         text-align: center;
     }
 
-    .canvas > h3 {
+    .canvas h3 {
         padding: 1em 3em;
     }
 
@@ -97,6 +97,7 @@
 
     .buttons {
         display: flex;
+        justify-content: center;
         --btn-rounding: 10px;
     }
 
@@ -125,6 +126,39 @@
     }
 
 
+    @media screen and (max-width: 1150px) {
+        .canvas {
+            padding: 1rem;
+        }
+
+        .headshots {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
+            padding: 1rem;
+            border-bottom: 2px solid var(--beaver-orange);
+        }
+
+        .headshot {
+            max-width: 150px;
+            max-height: 150px;
+            width: auto;
+            height: auto;
+            margin: auto;
+            overflow: hidden;
+            position: static;
+            margin-bottom: 5px;
+            grid-column: span 4;
+        }
+
+        .headshot img {
+            position: relative;
+        }
+
+
+    }
+
+
 
 
 
@@ -132,44 +166,44 @@
 
 <div class="canvas">
 
-    <div class="headshot">
-        [[{"fid":"3811","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"2":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":1986,"width":2354,"class":"media-element file-default","data-delta":"2"}}]]
-    </div>
-    <div class="headshot">
-        [[{"fid":"3621","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"159":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":2581,"width":2521,"class":"media-element file-default","data-delta":"159"}}]]
-    </div>
-    <div class="headshot">
-        [[{"fid":"3826","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"161":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":2501,"width":2271,"class":"media-element file-default","data-delta":"161"}}]]
-    </div>
-    <div class="headshot">
-        [[{"fid":"3411","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"154":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":367,"width":366,"class":"media-element file-default","data-delta":"154"}}]]
-    </div>
-    <div class="headshot">
-        [[{"fid":"3816","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"1":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":1613,"width":1613,"class":"media-element file-default","data-delta":"1"}}]]
-    </div>
-    <div class="headshot">
-        [[{"fid":"2531","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"79":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":300,"width":300,"class":"media-element file-default","data-delta":"79"}}]]
-    </div>
-    <div class="headshot">
-        [[{"fid":"3406","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"153":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":400,"width":400,"class":"media-element file-default","data-delta":"153"}}]]
-    </div>
-    <div class="headshot">
-        [[{"fid":"2916","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"134":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":300,"width":300,"class":"media-element file-default","data-delta":"134"}}]]
-    </div>
-    <div class="headshot">
-        [[{"fid":"3231","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"141":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":567,"width":584,"class":"media-element file-default","data-delta":"141"}}]]
-    </div>
-
-
-
-    <h3>Want some more insight? Check out what some of our previous interns have said, or even reach out to one of our current team members!</h3>
-
-    <div class="buttons">
-        <div data-link="/about#testimonals">Testimonials</div>
-        <div data-link="/about#current-team">Current Team</div>
+    <div class="headshots">
+        <div class="headshot">
+            [[{"fid":"3811","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"2":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":1986,"width":2354,"class":"media-element file-default","data-delta":"2"}}]]
+        </div>
+        <div class="headshot">
+            [[{"fid":"3621","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"159":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":2581,"width":2521,"class":"media-element file-default","data-delta":"159"}}]]
+        </div>
+        <div class="headshot">
+            [[{"fid":"3826","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"161":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":2501,"width":2271,"class":"media-element file-default","data-delta":"161"}}]]
+        </div>
+        <div class="headshot">
+            [[{"fid":"3411","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"154":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":367,"width":366,"class":"media-element file-default","data-delta":"154"}}]]
+        </div>
+        <div class="headshot">
+            [[{"fid":"3816","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"1":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":1613,"width":1613,"class":"media-element file-default","data-delta":"1"}}]]
+        </div>
+        <div class="headshot">
+            [[{"fid":"2531","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"79":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":300,"width":300,"class":"media-element file-default","data-delta":"79"}}]]
+        </div>
+        <div class="headshot">
+            [[{"fid":"3406","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"153":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":400,"width":400,"class":"media-element file-default","data-delta":"153"}}]]
+        </div>
+        <div class="headshot">
+            [[{"fid":"2916","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"134":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":300,"width":300,"class":"media-element file-default","data-delta":"134"}}]]
+        </div>
+        <div class="headshot">
+            [[{"fid":"3231","view_mode":"default","fields":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""},"type":"media","field_deltas":{"141":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":false,"field_file_image_title_text[und][0][value]":false,"external_url":""}},"link_text":null,"attributes":{"height":567,"width":584,"class":"media-element file-default","data-delta":"141"}}]]
+        </div>
     </div>
 
+    <div class="info">
+        <h3>Want some more insight? Check out what some of our previous interns have said, or even reach out to one of our current team members!</h3>
 
+        <div class="buttons">
+            <div data-link="/about#testimonals">Testimonials</div>
+            <div data-link="/about#current-team">Current Team</div>
+        </div>
+    </div>
 </div>
 
 
