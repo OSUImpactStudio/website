@@ -85,8 +85,10 @@
     }
 
     .card.expanded .overlay {
-    	height: 73.5%;
-    	background-color: var(--overlay-orange)
+    	height: 50%;
+    	background-color: var(--overlay-orange);
+        display: flex;
+        align-items: center;
     }
 
     .card img {
@@ -128,7 +130,7 @@
 
     .card-desc {
     	padding: 10px;
-        margin: 0;
+        margin: 0 !important; /* used for overwriting margin on drupal #content p */
         text-align: center;
     }
 
