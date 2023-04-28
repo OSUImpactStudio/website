@@ -3,68 +3,85 @@ When adding new sections, add the "even" class to every other section (drupal do
 -->
 
 <div class="series">
-    <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/videoseries?list=PLlKN6zNyLq72ue36ApFny9YWhAWEOlClc"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-    ></iframe>
-    <div class="info">
-        <h3>Adjacent Innovation and Portfolios</h3>
-        <p class="desc">
-            Why should you embrace adjacent innovation and portfolios? What is
-            the best path for Oregon State to create sustainable growth? Why
-            does Impact Studio love uncertainty and how is Impact Studio
-            building a strong portfolio of adjacent initiatives for the
-            University?
-            <br /><br />
-            Welcome to our Adjacent Innovation and Portfolios 4x4 video series -
-            that’s 4 videos, under 4 minutes each. Please enjoy and reach out to
-            us if you have questions or would like to discuss.
-        </p>
-    </div>
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/R6t8KDFebrs"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+  <div class="info">
+    <h3>An Introduction</h3>
+    <p class="desc">
+      Familiarize yourself with our work by viewing our introduction to the OSU
+      Board of Trustees in 2021.
+    </p>
+  </div>
+</div>
+<div class="series">
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/videoseries?list=PLlKN6zNyLq722Xf-QHElP-LP0_bUdtlLg"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+  <div class="info">
+    <h3>Adjacent Innovation and Portfolios</h3>
+    <p class="desc">
+      Why should you embrace adjacent innovation and portfolios? What is the
+      best path for Oregon State to create sustainable growth? Why does Impact
+      Studio love uncertainty and how is Impact Studio building a strong
+      portfolio of adjacent initiatives for the University?
+      <br /><br />
+      Welcome to our Adjacent Innovation and Portfolios 4x4 video series -
+      that’s 4 videos, under 4 minutes each. Please enjoy and reach out to us if
+      you have questions or would like to discuss.
+    </p>
+  </div>
 </div>
 
 <!-- Reminder that media queries should go at the end so that the general rule doesnt overwrite the media rule -->
 
 <style>
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-    }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
+  .series {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem;
+  }
+
+  .series > iframe {
+    aspect-ratio: 16 / 9;
+  }
+
+  .info {
+    padding: 0 1rem;
+    width: 60%;
+  }
+
+  .info h4 {
+    margin-top: 0;
+  }
+
+  @media screen and (max-width: 1040px) {
     .series {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        margin: 1rem;
-    }
-
-    .series > iframe {
-        aspect-ratio: 16 / 9;
+      flex-direction: column-reverse;
     }
 
     .info {
-        padding: 0 1rem;
-        width: 60%;
+      width: 100%;
     }
-
-    .info h4 {
-        margin-top: 0;
-    }
-
-    @media screen and (max-width: 1040px) {
-        .series {
-            flex-direction: column-reverse;
-        }
-
-        .info {
-            width: 100%;
-        }
-    }
+  }
 </style>
