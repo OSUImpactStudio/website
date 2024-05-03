@@ -74,6 +74,70 @@
     .org-title {
         margin-top: 0;
     }
+
+    #closeDialog {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+
+    #aboutDialog {
+        width: 875px;
+        height: 475px;
+        /* Enable vertical scrolling if content exceeds height */
+        overflow-y: auto;
+        padding: 1.25rem;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+        border: none;
+    }
+
+    .cardName {
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+
+    .headshot {
+        overflow: visible;
+    }
+
+    .headshot img {
+        transition: 0.2s;
+    }
+
+    .headshot img:hover {
+        box-shadow: 0 0 10px 5px #ccc;
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+
+    .dialogMajor::before {
+        content: "Major: ";
+        font-weight: bold;
+    }
+
+    .dialogProjects::before {
+        content: "Projects: ";
+        font-weight: bold;
+    }
+
+    .dialogBio::before {
+        content: "Bio: ";
+        font-weight: bold;
+    }
+
+    .dialogRole::before {
+        content: "Role: ";
+        font-weight: bold;
+    }
+
+    .dialogStudentYear::before {
+        content: "Class Year: ";
+        font-weight: bold;
+    }
 </style>
 
 <h3 id="current-team">Our Team</h3>
@@ -163,3 +227,116 @@
         </div>
     </div>
 </div>
+
+<dialog id="aboutDialog" class="fadeIn">
+    <!-- Content will go in here via JS -->
+</dialog>
+
+<script>
+    const employeeData = [
+        {
+            name: "Jade Duong",
+            role: "Research Analyst",
+            projects: "Economic Development and Industry Relations (EDIR), Hemp-based Carbon Economy (HCE), university grants and initiatives",
+            studentYear: "Graduated in 2022",
+            major: "MSB in Financial Analytics",
+            bio: "Jade Duong is a research analyst at Impact Studio. Having earned her bachelor's degree in Business Administration in 2020 and a master's in Financial Analytics in 2022 from OSU, Jade's drive stems from her passion for exploring market research, strategic planning, and financial markets. What energizes her most about being part of Impact Studio is the dynamic, collaborative atmosphere, where she thrives on learning from fellow brilliant minds who challenge and inspire her every day. Outside of work, Jade enjoys exploring hiking trails, indulging in diverse international cuisines, or simply enjoying quality time with her furry companions, Finley and Simon, at home."
+        },
+        {
+            name: "Ekaterina Dunovskaia",
+            role: "Graduate Research Assistant",
+            projects: "GCE+, EDIR, DSI, graphic design support for COE. university grants and initiatives",
+            studentYear: "2nd year graduate",
+            major: "Master's of Science in Business w/ focus in Marketing Insights & Analitics",
+            bio: "Meet Kate, originally from Ekaterinburg, Russia. Some of her hobbies include rock climbing, scaling cliffs and pushing her limits, and traveling, fueling her desire to explore new horizons and cultures. Additionally, she's always eager to dive into unfamiliar hobbies and locales, embracing each experience as an opportunity for growth and discovery. In her eyes, life is an endless journey, and she's determined to make every moment count."
+        },
+        {
+            name: "Latsanivong Yommalath",
+            role: "Design Intern",
+            projects: "EDIR, Social Media, NSF, semiconductor, DSI, Mass Timber",
+            studentYear: "3rd year undergraduate",
+            major: "Innovation and Enterpreneurship",
+            bio: "Ann Yommalath is a design Intern at Impact Studio. Currently a third year student pursueing a degree in Innovation and Enteroreneurship at Oregon State University. She is from Vientiane, Lao PDR and she loves to play badminton. Her favorite quote is \"If you fail to prepare, you prepared to fail.\""
+        },
+        {
+            name: "Pongchalat Chaisiriroj",
+            role: "Graduate Research Assistant",
+            projects: "EDIR, NOAA, NVIDIA AI Tech center, PTIE, Mass Timber, IHH, university grants and initiatives, DSI.",
+            studentYear: "4th year graduate",
+            major: "PhD in Mechanical Engineering w/ focus in Design",
+            bio: "Pongchalat is finishing up his PhD in Mechanical Engineering in the Summer of 2024. He is from Thailand and has a keen passion for exploring culinary delights. Always on the lookout for new restaurants, Pongchalat enjoys discovering diverse foods and flavors that reflect different cultures and traditions. In his leisure time, he loves watching movies and series, and he finds joy in reading novels, which offer him a gateway to different worlds and perspectives."
+        },
+        {
+            name: "Evann Kobashigawa",
+            role: "Design Intern",
+            projects: "EDIR, IHH, NSF Engine, university grants and initiatives",
+            studentYear: "4th year undergraduate",
+            major: "Mechanical Engineering w/ focus in product design and development",
+            bio: "Evann's name is spelt with 2 n's. It is not a typo. He will graduate in the spring of 2024 with a bachelor's degree. Originally from Oahu, he naturally picked up a love for the outdoors. In his free time, he enjoys activities that nature has to offer such as hiking and surfing. Indoor activities Evann loves to do are cooking and playing electric guitar. His favorite quote and life motto is \"it is what it is.\""
+        },
+        {
+            name: "Jamie Liu",
+            role: "Design Intern",
+            projects: "EDIR, university grants and initiatives, web development support",
+            studentYear: "2nd year undergraduate",
+            major: "Computer Science w/application in data science",
+            bio: "Jamie is a second year studying Computer Science. From Portland, she likes to go coffee-shop-hopping with her friends and go on rainy hikes. In her free time, she likes to create projects to keep her busy: knitting a new sweater, finishing an old book, or developing LSTMs that overfit data (yikes)."
+        },
+        {
+            name: "Nicolas Haralambidis",
+            role: "Web Developer Intern",
+            projects: "ORTSOC, DSI, EDIR, university grants and initiatives",
+            studentYear: "4th year undergraduate",
+            major: "Computer Science w/ application in web development",
+            bio: "Nicolas is currently finishing up his undergraduate degree in Computer Science. He is from Northern California and in his free time, Nicolas enjoys playing basketball, baseball, and spikeball. When he is not outside playing sports, he is hanging out with friends or working on his personal projects at home. Nicolas's favorite things about working at Impact Studio is the positive work environment and being able to help people that need solutions to their problems."
+        },
+        {
+            name: "Victoria Gutierrez",
+            role: "Graphic Design Intern",
+            projects: "DSI, Social Media, university grants and initiatives",
+            studentYear: "2nd year undergraduate",
+            major: "Graphic Design",
+            bio: "Victoria is a second year Graphic Design student from Forest Grove, Oregon. When she's not doing design work, she enjoys spending time with friends, going to concerts, and working on her own personal projects. These range anywhere from illustration, animation, 3D modeling, practicing guitar, sewing plushies, and propagating plants. She is always looking for new skills to learn and hobbies to delve into."
+        }
+    ];
+
+    const dialog = document.getElementById('aboutDialog');
+    const headshot = document.querySelectorAll('.headshot');
+    console.log("headshot: ", headshot);
+    headshot.forEach(card => {
+        card.addEventListener('click', function () {
+            const name = card.parentElement.children[1].children[0].textContent.trim();   // headshot -> profile -> description -> name
+            const cardData = employeeData.find(data => data.name === name);
+            if (cardData) {
+                fillDialog(cardData);
+                dialog.showModal();
+            } else {
+                console.log("No card data");
+            }
+        });
+    });
+
+
+    function fillDialog(cardData) {
+        /*
+         * Drupal is very picky with adding content like this so
+         * be careful changing the structure of 'content' or Drupal may reformat it
+         * which messes up styling
+         */
+        const content = `
+        <div></div>
+        <p class="cardName">${cardData.name}</p>
+        <p class="dialogRole">${cardData.role}</p>
+        <p class="dialogProjects">${cardData.projects}</p>
+        <p class="dialogStudentYear">${cardData.studentYear}</p>
+        <p class="dialogMajor">${cardData.major}</p>
+        <p class="dialogBio">${cardData.bio}</p>
+        <div></div>
+        <span id="closeDialog">&times;</span>`;
+        dialog.innerHTML = content;
+        const closeDialog = document.getElementById('closeDialog');
+        closeDialog.addEventListener('click', function () {
+            dialog.close();
+        });
+    }
+</script>
